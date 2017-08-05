@@ -1,0 +1,68 @@
+body{
+	background-image: url("rift.png");
+}
+img{
+	position: relative; 
+float: left;
+}
+h1{
+	
+	
+}
+#custom{
+	position: relative;
+	font-weight: lighter;
+	font-family: roboto;
+	color: white;
+	font-size: 36px;
+	margin: 20px;
+	
+}
+#about{
+	position:relative;
+	
+	font-weight: lighter;
+	font-family: roboto;
+	color: white;
+	font-size: 36px;
+	margin: 20px;
+
+
+}
+#home{
+	position:relative;
+	
+	font-weight: lighter;
+	font-family: roboto;
+	color: white;
+	font-size: 36px;
+	margin: 20px;
+
+}
+
+nav{
+	position: relative;
+	width: 99%;
+	text-align:right;
+	line-height: 60px;
+	padding: 30px;
+}
+#descriptiontitle{
+	position: relative;
+	font-weight: bold;
+	font-family: roboto;
+	color: white;
+	font-size: 60px;
+	}
+#main{
+	position: relative;
+	width: 60%;
+	padding-top: 50px;
+}
+#description{
+position: relative;
+	font-weight: bold;
+	font-family: roboto;
+	color: white;
+	font-size: 36px;
+}
