@@ -1,0 +1,126 @@
+body{
+	background-image: url("rift.png");
+}
+#logo{
+	position: relative; 
+float: left;
+}
+h1{
+	
+	
+}
+#custom{
+	position: relative;
+	font-weight: lighter;
+	font-family: roboto;
+	color: white;
+	font-size: 36px;
+	margin: 20px;
+	
+}
+#about{
+	position:relative;
+	
+	font-weight: lighter;
+	font-family: roboto;
+	color: white;
+	font-size: 36px;
+	margin: 20px;
+
+
+}
+#home{
+	position:relative;
+	
+	font-weight: lighter;
+	font-family: roboto;
+	color: white;
+	font-size: 36px;
+	margin: 20px;
+
+}
+#description{
+	position: relative;
+	font-weight: bold;
+	font-family: roboto;
+	color: white;
+	font-size: 60px;
+	top: -100px;
+}
+#summoner{
+	position: relative;
+	background: rgba(0,0,0,0.5);
+	width: 700px;
+	height: 125px;
+	color: white;
+	font-family: roboto;
+	font-size: 36px;
+	font-weight: lighter;
+	top: -50px;
+}
+#search-submit{
+	position: relative;
+	width: 180px;
+	height: 125px;
+	
+	font-family: roboto;
+	font-size: 36px;
+	top: -50px;
+	color:white;
+	background: rgba(0,0,0,0.5);
+	right: 5px;
+}
+input::placeholder{
+	position: relative;
+	font-size: 36;
+	font-family: roboto;
+	font-weight: lighter;
+
+}
+input{
+	padding: 30px;
+}
+nav{
+	position: relative;
+	width: 99%;
+	text-align:right;
+	line-height: 60px;
+	padding: 30px;
+}
+
+
+#main{
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
+.champion{
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.primary{
+	position: relative;
+	margin-left: 20px;
+	left: 1px;
+}
+.secondary{
+	position: relative;
+	margin-right: 20px;
+	right: 1px;
+}
+.boots{
+	position: relative;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.insight{
+	position: relative;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
