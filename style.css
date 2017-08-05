@@ -1,0 +1,97 @@
+body{
+	background-image: url("rift.png");
+}
+img{
+	position: relative; 
+float: left;
+}
+h1{
+	
+	
+}
+#custom{
+	position: relative;
+	font-weight: lighter;
+	font-family: roboto;
+	color: white;
+	font-size: 36px;
+	margin: 20px;
+	
+}
+#about{
+	position:relative;
+	
+	font-weight: lighter;
+	font-family: roboto;
+	color: white;
+	font-size: 36px;
+	margin: 20px;
+
+
+}
+#home{
+	position:relative;
+	
+	font-weight: lighter;
+	font-family: roboto;
+	color: white;
+	font-size: 36px;
+	margin: 20px;
+
+}
+#description{
+	position: relative;
+	font-weight: bold;
+	font-family: roboto;
+	color: white;
+	font-size: 60px;
+	top: -100px;
+}
+#summoner{
+	position: relative;
+	background: rgba(0,0,0,0.5);
+	width: 700px;
+	height: 125px;
+	color: white;
+	font-family: roboto;
+	font-size: 36px;
+	font-weight: lighter;
+top: -50px;
+}
+#search-submit{
+	position: relative;
+	width: 180px;
+	height: 125px;
+	
+	font-family: roboto;
+	font-size: 36px;
+	top: -50px;
+	color:white;
+	background: rgba(0,0,0,0.5);
+	right: 5px;
+}
+input::placeholder{
+	position: relative;
+	font-size: 36;
+	font-family: roboto;
+	font-weight: lighter;
+
+}
+input{
+	padding: 30px;
+}
+nav{
+	position: relative;
+	width: 99%;
+	text-align:right;
+	line-height: 60px;
+	padding: 30px;
+}
+
+
+#main{
+	position: relative;
+	padding-top: 275px;
+	width: 100%;
+	text-align: center
+}
