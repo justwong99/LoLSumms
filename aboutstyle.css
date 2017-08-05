@@ -1,7 +1,7 @@
 body{
 	background-image: url("rift.png");
 }
-img{
+#logo{
 	position: relative; 
 float: left;
 }
