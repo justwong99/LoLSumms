@@ -2,6 +2,7 @@
 
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="main.js"></script>
 <title>LoLSumms</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -25,8 +26,8 @@ League of Legends <br/> Summoner Spell Timer
 </h1>
 
 
-<input type="text" placeholder="Summoner name..." id="summoner" align="left">
-<button type="submit" id="search-submit"><span>Search</span></button>
+<input type="text" name = "username" placeholder="Summoner name..." value = "" id="summoner" align="left" onkeypress="handle(event)"></input>
+<button type="submit" id="search-submit" onclick="search()"><span>Search</span></button>
 </div>
 
 
