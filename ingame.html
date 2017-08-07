@@ -2,6 +2,7 @@
 
 <head>
 <link rel="stylesheet" type="text/css" href="ingamestyle.css">
+<script type="text/javascript" src="main.js"></script>
 <title>LoLSumms</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -23,36 +24,132 @@
 
 
 <div class="container" id="main">
-<img src="none.png" alt = "champ 1" id = "champ1" class = "champion";>
+	<div class="dropdown">
+<button style="background: url(none.png)" alt = "champ 1" id = "champ1" class = "champion" onclick="showDropdown(0), champnum = 0"></button>
+	<div id="myDropdown" class="dropdown-content">
+    <a href="#" onClick = "change('Aatrox', champnum)">Aatrox</a>
+    <a href="#" onClick = "change('Ahri', champnum)">Ahri</a>
+  	<a href="#" onClick = "change('Akali', champnum)">Akali</a>
+  	<a href="#" onClick = "change('Alistar', champnum)">Alistar</a>
+  	<a href="#" onClick = "change('Amumu', champnum)">Amumu</a>
+  	<a href="#" onClick = "change('AurelionSol', champnum)">Aurelion Sol</a>
+  	<a href="#" onClick = "change('Azir', champnum)">Azir</a>
+  	<a href="#" onClick = "change('Bard', champnum)">Bard</a>
+  	<a href="#" onClick = "change('Brand', champnum)">Brand</a>
+  	<a href="#" onClick = "change('Braum', champnum)">Braum</a>
+  	<a href="#" onClick = "change('Caitlyn', champnum)">Caitlyn</a>
+  	<a href="#" onClick = "change('Camille', champnum)">Camille</a>
+  	<a href="#" onClick = "change('Cassiopeia', champnum)">Cassiopeia</a>
+  	<a href="#" onClick = "change('Chogath', champnum)">Cho'Gath</a>
+  	<a href="#" onClick = "change('Corki', champnum)">Corki</a>
+  	<a href="#" onClick = "change('Darius', champnum)">Darius</a>
+  	<a href="#" onClick = "change('Diana', champnum)">Diana</a>
+  	<a href="#" onClick = "change('Draven', champnum)">Draven</a>
+  	<a href="#" onClick = "change('DrMundo', champnum)">Dr. Mundo</a>
+  	<a href="#" onClick = "change('Ekko', champnum)">Ekko</a>
+  	<a href="#" onClick = "change('Elise', champnum)">Elise</a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+  	<a href="#" onClick = "change('', champnum)"></a>
+ 
+ 
+  </div>
+
 <img src="none.png" alt = "spell 1" id = "spell1" class = "primary";>
 <img src="none.png" alt = "spell 2" id = "spell2" class = "secondary";>
 <img src="none.png" alt = "boots" id = "boots1" class = "boots";>
 <img src="none.png" alt = "insight"  id = "insight1" class = "insight";>
 <br/>
-<img src="none.png" alt = "champ 2" id = "champ2" class = "champion";>
+<button style="background: url(none.png)" alt = "champ 2" id = "champ2" class = "champion" onclick="showDropdown(1)"></button>
 <img src="none.png" alt = "spell 1" id = "spell3" class = "primary";>
 <img src="none.png" alt = "spell 2" id = "spell4" class = "secondary";>
 <img src="none.png" alt = "boots" id = "boots2" class = "boots";>
 <img src="none.png" alt = "insight"  id = "insight2" class = "insight";>
 <br/>
-<img src="none.png" alt = "champ 2" id = "champ2" class = "champion";>
+<button style="background: url(none.png)" alt = "champ 3" id = "champ3" class = "champion" onclick="showDropdown(2)"></button>
 <img src="none.png" alt = "spell 1" id = "spell3" class = "primary";>
 <img src="none.png" alt = "spell 2" id = "spell4" class = "secondary";>
 <img src="none.png" alt = "boots" id = "boots2" class = "boots";>
 <img src="none.png" alt = "insight"  id = "insight2" class = "insight";>
 <br/>
-<img src="none.png" alt = "champ 2" id = "champ2" class = "champion";>
+<button style="background: url(none.png)" alt = "champ 4" id = "champ4" class = "champion" onclick="showDropdown(3)"></button>
 <img src="none.png" alt = "spell 1" id = "spell3" class = "primary";>
 <img src="none.png" alt = "spell 2" id = "spell4" class = "secondary";>
 <img src="none.png" alt = "boots" id = "boots2" class = "boots";>
 <img src="none.png" alt = "insight"  id = "insight2" class = "insight";>
 <br/>
-<img src="none.png" alt = "champ 2" id = "champ2" class = "champion";>
+<button style="background: url(none.png)" alt = "champ 5" id = "champ5" class = "champion" onclick="showDropdown(4)"></button>
 <img src="none.png" alt = "spell 1" id = "spell3" class = "primary";>
 <img src="none.png" alt = "spell 2" id = "spell4" class = "secondary";>
 <img src="none.png" alt = "boots" id = "boots2" class = "boots";>
 <img src="none.png" alt = "insight"  id = "insight2" class = "insight";>
-
+</div>
 
 
 </div>
