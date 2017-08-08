@@ -2,6 +2,7 @@
 
 <head>
 <link rel="stylesheet" type="text/css" href="ingamestyle.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="main.js"></script>
 <title>LoLSumms</title>
 <!-- Latest compiled and minified CSS -->
@@ -25,137 +26,139 @@
 
 <div class="container" id="main">
 	<div class="dropdown">
-<button style="background: url(none.png)" alt = "champ 1" id = "champ1" class = "champion" onclick="showDropdown(0), champnum = 0"></button>
+<button style="background-image: url(none.png)" alt = "champ 1" id = "champ1" class = "champion" onclick="showDropdown(); tempid = 'champ1' "></button>
 	<div id="myDropdown" class="dropdown-content">
-    <a href="#" onClick = "change('Aatrox', champnum)">Aatrox</a>
-    <a href="#" onClick = "change('Ahri', champnum)">Ahri</a>
-  	<a href="#" onClick = "change('Akali', champnum)">Akali</a>
-  	<a href="#" onClick = "change('Alistar', champnum)">Alistar</a>
-  	<a href="#" onClick = "change('Amumu', champnum)">Amumu</a>
-  	<a href="#" onClick = "change('AurelionSol', champnum)">Aurelion Sol</a>
-  	<a href="#" onClick = "change('Azir', champnum)">Azir</a>
-  	<a href="#" onClick = "change('Bard', champnum)">Bard</a>
-  	<a href="#" onClick = "change('Brand', champnum)">Brand</a>
-  	<a href="#" onClick = "change('Braum', champnum)">Braum</a>
-  	<a href="#" onClick = "change('Caitlyn', champnum)">Caitlyn</a>
-  	<a href="#" onClick = "change('Camille', champnum)">Camille</a>
-  	<a href="#" onClick = "change('Cassiopeia', champnum)">Cassiopeia</a>
-  	<a href="#" onClick = "change('Chogath', champnum)">Cho'Gath</a>
-  	<a href="#" onClick = "change('Corki', champnum)">Corki</a>
-  	<a href="#" onClick = "change('Darius', champnum)">Darius</a>
-  	<a href="#" onClick = "change('Diana', champnum)">Diana</a>
-  	<a href="#" onClick = "change('Draven', champnum)">Draven</a>
-  	<a href="#" onClick = "change('DrMundo', champnum)">Dr. Mundo</a>
-  	<a href="#" onClick = "change('Ekko', champnum)">Ekko</a>
-  	<a href="#" onClick = "change('Elise', champnum)">Elise</a>
-  	<a href="#" onClick = "change('Evelynn', champnum)">Evelynn</a>
-  	<a href="#" onClick = "change('Ezreal', champnum)">Ezreal</a>
-  	<a href="#" onClick = "change('FiddleSticks', champnum)">Fiddlesticks</a>
-  	<a href="#" onClick = "change('Fiora', champnum)">Fiora</a>
-  	<a href="#" onClick = "change('Fizz', champnum)">Fizz</a>
-  	<a href="#" onClick = "change('Galio', champnum)">Galio</a>
-  	<a href="#" onClick = "change('Gangplank', champnum)">Gangplank</a>
-  	<a href="#" onClick = "change('Garen', champnum)">Garen</a>
-  	<a href="#" onClick = "change('Gnar', champnum)">Gnar</a>
-  	<a href="#" onClick = "change('Gragas', champnum)">Gragas</a>
-  	<a href="#" onClick = "change('Graves', champnum)">Graves</a>
-  	<a href="#" onClick = "change('Hecarim', champnum)"></a>Hecarim
-  	<a href="#" onClick = "change('Heimerdinger', champnum)">Heimerdinger</a>
-  	<a href="#" onClick = "change('Illaoi', champnum)">Illaoi</a>
-  	<a href="#" onClick = "change('Irelia', champnum)">Irelia</a>
-  	<a href="#" onClick = "change('Ivern', champnum)">Ivern</a>
-  	<a href="#" onClick = "change('Janna', champnum)">Janna</a>
-  	<a href="#" onClick = "change('JarvanIV', champnum)">Jarvan IV</a>
-  	<a href="#" onClick = "change('Jax', champnum)">Jax</a>
-  	<a href="#" onClick = "change('Jhin', champnum)">Jayce</a>
-  	<a href="#" onClick = "change('Jinx', champnum)">Jinx</a>
-  	<a href="#" onClick = "change('Kalista', champnum)">Kalista</a>
-  	<a href="#" onClick = "change('Karma', champnum)">Karma</a>
-  	<a href="#" onClick = "change('Karthus', champnum)">Karthus</a>
-  	<a href="#" onClick = "change('Kassadin', champnum)">Kassadin</a>
-  	<a href="#" onClick = "change('Katarina', champnum)">Katarina</a>
-  	<a href="#" onClick = "change('Kayle', champnum)">Kayle</a>
-  	<a href="#" onClick = "change('Kayn', champnum)">Kayn</a>
-  	<a href="#" onClick = "change('Kennen', champnum)">Kennen</a>
-  	<a href="#" onClick = "change('Khazix', champnum)">Kha'Zix</a>
-  	<a href="#" onClick = "change('Kindred', champnum)">Kindred</a>
-  	<a href="#" onClick = "change('Kled', champnum)">Kled</a>
-  	<a href="#" onClick = "change('KogMaw', champnum)">Kog'Maw</a>
-  	<a href="#" onClick = "change('Leblanc', champnum)">Leblanc</a>
-  	<a href="#" onClick = "change('LeeSin', champnum)">Lee Sin</a>
-  	<a href="#" onClick = "change('Leona', champnum)">Leona</a>
-  	<a href="#" onClick = "change('Lissandra', champnum)">Lissandra</a>
-  	<a href="#" onClick = "change('Lucian', champnum)">Lucian</a>
-  	<a href="#" onClick = "change('Lulu', champnum)">Lulu</a>
-  	<a href="#" onClick = "change('Lux', champnum)">Lux</a>
-  	<a href="#" onClick = "change('Malphite', champnum)">Malphite</a>
-  	<a href="#" onClick = "change('Malzahar', champnum)">Malzahar</a>
-  	<a href="#" onClick = "change('Maokai', champnum)">Maokai</a>
-  	<a href="#" onClick = "change('MasterYi', champnum)">Master Yi</a>
-  	<a href="#" onClick = "change('MissFortune', champnum)">Miss Fortune</a>
-  	<a href="#" onClick = "change('Mordekaiser', champnum)">Mordekaiser</a>
-  	<a href="#" onClick = "change('Morgana', champnum)">Morgana</a>
-  	<a href="#" onClick = "change('Nami', champnum)">Nami</a>
-  	<a href="#" onClick = "change('Nasus', champnum)">Nasus</a>
-  	<a href="#" onClick = "change('Nautilus', champnum)">Nautilus</a>
-  	<a href="#" onClick = "change('Nidalee', champnum)">Nidalee</a>
-  	<a href="#" onClick = "change('Nocturne', champnum)">Nocturne</a>
-  	<a href="#" onClick = "change('Nunu', champnum)">Nunu</a>
-  	<a href="#" onClick = "change('Olafa', champnum)">Olaf</a>
-  	<a href="#" onClick = "change('Orianna', champnum)">Orianna</a>
-  	<a href="#" onClick = "change('Pantheon', champnum)">Pantheon</a>
-  	<a href="#" onClick = "change('Poppy', champnum)">Poppy</a>
-  	<a href="#" onClick = "change('Quinn', champnum)">Quinn</a>
-  	<a href="#" onClick = "change('Rammus', champnum)">Rammus</a>
-  	<a href="#" onClick = "change('RekSai', champnum)">Rek'Sai</a>
-  	<a href="#" onClick = "change('Renekton', champnum)">Renekton</a>
-  	<a href="#" onClick = "change('Rengar', champnum)">Rengar</a>
-  	<a href="#" onClick = "change('Riven', champnum)">Riven</a>
-  	<a href="#" onClick = "change('Rumble', champnum)">Rumblle</a>
-  	<a href="#" onClick = "change('Ryze', champnum)">Ryze</a>
-  	<a href="#" onClick = "change('Sejuani', champnum)">Sejuani</a>
-  	<a href="#" onClick = "change('Shaco', champnum)">Shaco</a>
-  	<a href="#" onClick = "change('Shen', champnum)">Shen</a>
-  	<a href="#" onClick = "change('Shyvana', champnum)">Shyvana</a>
-  	<a href="#" onClick = "change('Singed', champnum)">Singed</a>
-  	<a href="#" onClick = "change('Sion', champnum)">Sion</a>
-  	<a href="#" onClick = "change('Sivir', champnum)">Sivir</a>
-  	<a href="#" onClick = "change('Skarner', champnum)">Skarner</a>
-  	<a href="#" onClick = "change('Sona', champnum)">Sona</a>
-  	<a href="#" onClick = "change('Soraka', champnum)">Soraka</a>
-  	<a href="#" onClick = "change('Swain', champnum)">Swain</a>
-  	<a href="#" onClick = "change('Syndra', champnum)">Syndra</a>
-  	<a href="#" onClick = "change('TahmKench', champnum)">Tahm Kench</a>
-  	<a href="#" onClick = "change('Taliyah', champnum)">Taliyah</a>
-  	<a href="#" onClick = "change('Talon', champnum)">Talon</a>
-  	<a href="#" onClick = "change('Taric', champnum)">Taric</a>
-  	<a href="#" onClick = "change('Teemo', champnum)">Teemo</a>
-  	<a href="#" onClick = "change('Thresh', champnum)">Thresh</a>
-  	<a href="#" onClick = "change('Tristana', champnum)">Tristana</a>
-  	<a href="#" onClick = "change('Trundle', champnum)">Trundle</a>
-  	<a href="#" onClick = "change('Tryndamere', champnum)">Tryndamere</a>
-  	<a href="#" onClick = "change('TwistedFate', champnum)">Twisted Fate</a>
-  	<a href="#" onClick = "change('Twitch', champnum)">Twitch</a>
-  	<a href="#" onClick = "change('Udyr', champnum)">Udyr</a>
-  	<a href="#" onClick = "change('Urgot', champnum)">Urgot</a>
-  	<a href="#" onClick = "change('Varus', champnum)">Varus</a>
-  	<a href="#" onClick = "change('Vayne', champnum)">Vayne</a>
-  	<a href="#" onClick = "change('Veigar', champnum)">Veigar</a>
-  	<a href="#" onClick = "change('Vi', champnum)">Vi</a>
-  	<a href="#" onClick = "change('Viktor', champnum)">Viktor</a>
-  	<a href="#" onClick = "change('Vladimir', champnum)">Vladimir</a>
-  	<a href="#" onClick = "change('Volibear', champnum)">Volibear</a>
-  	<a href="#" onClick = "change('Warwick', champnum)">Warwick</a>
-  	<a href="#" onClick = "change('MonkeyKing', champnum)">Wukong</a>
-  	<a href="#" onClick = "change('Xerath', champnum)">Xerath</a>
-  	<a href="#" onClick = "change('XinZhao', champnum)">Xin Zhao</a>
-  	<a href="#" onClick = "change('Yasuo', champnum)">Yasuo</a>
-  	<a href="#" onClick = "change('Yorick', champnum)">Yorick</a>
-  	<a href="#" onClick = "change('Zac', champnum)">Zac</a>
-  	<a href="#" onClick = "change('Zed', champnum)">Zed</a>
-  	<a href="#" onClick = "change('Ziggs', champnum)">Ziggs</a>
-  	<a href="#" onClick = "change('Zilean', champnum)">Zilean</a>
-  	<a href="#" onClick = "change('Zyra', champnum)">Zyra</a>
+    <a href="#" onClick = "change('Aatrox')">Aatrox</a>
+    <a href="#" onClick = "change('Ahri')">Ahri</a>
+  	<a href="#" onClick = "change('Akali')">Akali</a>
+  	<a href="#" onClick = "change('Alistar')">Alistar</a>
+  	<a href="#" onClick = "change('Amumu')">Amumu</a>
+  	<a href="#" onClick = "change('AurelionSol')">Aurelion Sol</a>
+  	<a href="#" onClick = "change('Azir')">Azir</a>
+  	<a href="#" onClick = "change('Bard')">Bard</a>
+  	<a href="#" onClick = "change('Brand')">Brand</a>
+  	<a href="#" onClick = "change('Braum')">Braum</a>
+  	<a href="#" onClick = "change('Caitlyn')">Caitlyn</a>
+  	<a href="#" onClick = "change('Camille')">Camille</a>
+  	<a href="#" onClick = "change('Cassiopeia')">Cassiopeia</a>
+  	<a href="#" onClick = "change('Chogath')">Cho'Gath</a>
+  	<a href="#" onClick = "change('Corki')">Corki</a>
+  	<a href="#" onClick = "change('Darius')">Darius</a>
+  	<a href="#" onClick = "change('Diana')">Diana</a>
+  	<a href="#" onClick = "change('Draven')">Draven</a>
+  	<a href="#" onClick = "change('DrMundo')">Dr. Mundo</a>
+  	<a href="#" onClick = "change('Ekko')">Ekko</a>
+  	<a href="#" onClick = "change('Elise')">Elise</a>
+  	<a href="#" onClick = "change('Evelynn')">Evelynn</a>
+  	<a href="#" onClick = "change('Ezreal')">Ezreal</a>
+  	<a href="#" onClick = "change('FiddleSticks')">Fiddlesticks</a>
+  	<a href="#" onClick = "change('Fiora')">Fiora</a>
+  	<a href="#" onClick = "change('Fizz')">Fizz</a>
+  	<a href="#" onClick = "change('Galio')">Galio</a>
+  	<a href="#" onClick = "change('Gangplank')">Gangplank</a>
+  	<a href="#" onClick = "change('Garen')">Garen</a>
+  	<a href="#" onClick = "change('Gnar')">Gnar</a>
+  	<a href="#" onClick = "change('Gragas')">Gragas</a>
+  	<a href="#" onClick = "change('Graves')">Graves</a>
+  	<a href="#" onClick = "change('Hecarim')">Hecarim</a>
+  	<a href="#" onClick = "change('Heimerdinger')">Heimerdinger</a>
+  	<a href="#" onClick = "change('Illaoi')">Illaoi</a>
+  	<a href="#" onClick = "change('Irelia')">Irelia</a>
+  	<a href="#" onClick = "change('Ivern')">Ivern</a>
+  	<a href="#" onClick = "change('Janna')">Janna</a>
+  	<a href="#" onClick = "change('JarvanIV')">Jarvan IV</a>
+  	<a href="#" onClick = "change('Jax')">Jax</a>
+  	<a href="#" onClick = "change('Jhin')">Jayce</a>
+  	<a href="#" onClick = "change('Jinx')">Jinx</a>
+  	<a href="#" onClick = "change('Kalista')">Kalista</a>
+  	<a href="#" onClick = "change('Karma')">Karma</a>
+  	<a href="#" onClick = "change('Karthus')">Karthus</a>
+  	<a href="#" onClick = "change('Kassadin')">Kassadin</a>
+  	<a href="#" onClick = "change('Katarina')">Katarina</a>
+  	<a href="#" onClick = "change('Kayle')">Kayle</a>
+  	<a href="#" onClick = "change('Kayn')">Kayn</a>
+  	<a href="#" onClick = "change('Kennen')">Kennen</a>
+  	<a href="#" onClick = "change('Khazix')">Kha'Zix</a>
+  	<a href="#" onClick = "change('Kindred')">Kindred</a>
+  	<a href="#" onClick = "change('Kled')">Kled</a>
+  	<a href="#" onClick = "change('KogMaw')">Kog'Maw</a>
+  	<a href="#" onClick = "change('Leblanc')">Leblanc</a>
+  	<a href="#" onClick = "change('LeeSin')">Lee Sin</a>
+  	<a href="#" onClick = "change('Leona')">Leona</a>
+  	<a href="#" onClick = "change('Lissandra')">Lissandra</a>
+  	<a href="#" onClick = "change('Lucian')">Lucian</a>
+  	<a href="#" onClick = "change('Lulu')">Lulu</a>
+  	<a href="#" onClick = "change('Lux')">Lux</a>
+  	<a href="#" onClick = "change('Malphite')">Malphite</a>
+  	<a href="#" onClick = "change('Malzahar')">Malzahar</a>
+  	<a href="#" onClick = "change('Maokai')">Maokai</a>
+  	<a href="#" onClick = "change('MasterYi')">Master Yi</a>
+  	<a href="#" onClick = "change('MissFortune')">Miss Fortune</a>
+  	<a href="#" onClick = "change('Mordekaiser')">Mordekaiser</a>
+  	<a href="#" onClick = "change('Morgana')">Morgana</a>
+  	<a href="#" onClick = "change('Nami')">Nami</a>
+  	<a href="#" onClick = "change('Nasus')">Nasus</a>
+  	<a href="#" onClick = "change('Nautilus')">Nautilus</a>
+  	<a href="#" onClick = "change('Nidalee')">Nidalee</a>
+  	<a href="#" onClick = "change('Nocturne')">Nocturne</a>
+  	<a href="#" onClick = "change('Nunu')">Nunu</a>
+  	<a href="#" onClick = "change('Olafa')">Olaf</a>
+  	<a href="#" onClick = "change('Orianna')">Orianna</a>
+  	<a href="#" onClick = "change('Pantheon')">Pantheon</a>
+  	<a href="#" onClick = "change('Poppy')">Poppy</a>
+  	<a href="#" onClick = "change('Quinn')">Quinn</a>
+  	<a href="#" onClick = "change('Rakan')">Rakan</a>
+  	<a href="#" onClick = "change('Rammus')">Rammus</a>
+  	<a href="#" onClick = "change('RekSai')">Rek'Sai</a>
+  	<a href="#" onClick = "change('Renekton')">Renekton</a>
+  	<a href="#" onClick = "change('Rengar')">Rengar</a>
+  	<a href="#" onClick = "change('Riven')">Riven</a>
+  	<a href="#" onClick = "change('Rumble')">Rumblle</a>
+  	<a href="#" onClick = "change('Ryze')">Ryze</a>
+  	<a href="#" onClick = "change('Sejuani')">Sejuani</a>
+  	<a href="#" onClick = "change('Shaco')">Shaco</a>
+  	<a href="#" onClick = "change('Shen')">Shen</a>
+  	<a href="#" onClick = "change('Shyvana')">Shyvana</a>
+  	<a href="#" onClick = "change('Singed')">Singed</a>
+  	<a href="#" onClick = "change('Sion')">Sion</a>
+  	<a href="#" onClick = "change('Sivir')">Sivir</a>
+  	<a href="#" onClick = "change('Skarner')">Skarner</a>
+  	<a href="#" onClick = "change('Sona')">Sona</a>
+  	<a href="#" onClick = "change('Soraka')">Soraka</a>
+  	<a href="#" onClick = "change('Swain')">Swain</a>
+  	<a href="#" onClick = "change('Syndra')">Syndra</a>
+  	<a href="#" onClick = "change('TahmKench')">Tahm Kench</a>
+  	<a href="#" onClick = "change('Taliyah')">Taliyah</a>
+  	<a href="#" onClick = "change('Talon')">Talon</a>
+  	<a href="#" onClick = "change('Taric')">Taric</a>
+  	<a href="#" onClick = "change('Teemo')">Teemo</a>
+  	<a href="#" onClick = "change('Thresh')">Thresh</a>
+  	<a href="#" onClick = "change('Tristana')">Tristana</a>
+  	<a href="#" onClick = "change('Trundle')">Trundle</a>
+  	<a href="#" onClick = "change('Tryndamere')">Tryndamere</a>
+  	<a href="#" onClick = "change('TwistedFate')">Twisted Fate</a>
+  	<a href="#" onClick = "change('Twitch')">Twitch</a>
+  	<a href="#" onClick = "change('Udyr')">Udyr</a>
+  	<a href="#" onClick = "change('Urgot')">Urgot</a>
+  	<a href="#" onClick = "change('Varus')">Varus</a>
+  	<a href="#" onClick = "change('Vayne')">Vayne</a>
+  	<a href="#" onClick = "change('Veigar')">Veigar</a>
+  	<a href="#" onClick = "change('Vi')">Vi</a>
+  	<a href="#" onClick = "change('Viktor')">Viktor</a>
+  	<a href="#" onClick = "change('Vladimir')">Vladimir</a>
+  	<a href="#" onClick = "change('Volibear')">Volibear</a>
+  	<a href="#" onClick = "change('Warwick')">Warwick</a>
+  	<a href="#" onClick = "change('MonkeyKing')">Wukong</a>
+  	<a href="#" onClick = "change('Xayah')">Xayah</a>
+  	<a href="#" onClick = "change('Xerath')">Xerath</a>
+  	<a href="#" onClick = "change('XinZhao')">Xin Zhao</a>
+  	<a href="#" onClick = "change('Yasuo')">Yasuo</a>
+  	<a href="#" onClick = "change('Yorick')">Yorick</a>
+  	<a href="#" onClick = "change('Zac')">Zac</a>
+  	<a href="#" onClick = "change('Zed')">Zed</a>
+  	<a href="#" onClick = "change('Ziggs')">Ziggs</a>
+  	<a href="#" onClick = "change('Zilean')">Zilean</a>
+  	<a href="#" onClick = "change('Zyra')">Zyra</a>
   </div>
 
 <img src="none.png" alt = "spell 1" id = "spell1" class = "primary";>
@@ -163,25 +166,25 @@
 <img src="none.png" alt = "boots" id = "boots1" class = "boots";>
 <img src="none.png" alt = "insight"  id = "insight1" class = "insight";>
 <br/>
-<button style="background: url(none.png)" alt = "champ 2" id = "champ2" class = "champion" onclick="showDropdown(1)"></button>
+<button style="background-image: url(none.png)" alt = "champ 2" id = "champ2" class = "champion" onclick="showDropdown(); tempid = 'champ2' "></button>
 <img src="none.png" alt = "spell 1" id = "spell3" class = "primary";>
 <img src="none.png" alt = "spell 2" id = "spell4" class = "secondary";>
 <img src="none.png" alt = "boots" id = "boots2" class = "boots";>
 <img src="none.png" alt = "insight"  id = "insight2" class = "insight";>
 <br/>
-<button style="background: url(none.png)" alt = "champ 3" id = "champ3" class = "champion" onclick="showDropdown(2)"></button>
+<button style="background-image: url(none.png)" alt = "champ 3" id = "champ3" class = "champion" onclick="showDropdown(); tempid = 'champ3' "></button>
 <img src="none.png" alt = "spell 1" id = "spell3" class = "primary";>
 <img src="none.png" alt = "spell 2" id = "spell4" class = "secondary";>
 <img src="none.png" alt = "boots" id = "boots2" class = "boots";>
 <img src="none.png" alt = "insight"  id = "insight2" class = "insight";>
 <br/>
-<button style="background: url(none.png)" alt = "champ 4" id = "champ4" class = "champion" onclick="showDropdown(3)"></button>
+<button style="background-image: url(none.png)" alt = "champ 4" id = "champ4" class = "champion" onclick="showDropdown(); tempid = 'champ4'"></button>
 <img src="none.png" alt = "spell 1" id = "spell3" class = "primary";>
 <img src="none.png" alt = "spell 2" id = "spell4" class = "secondary";>
 <img src="none.png" alt = "boots" id = "boots2" class = "boots";>
 <img src="none.png" alt = "insight"  id = "insight2" class = "insight";>
 <br/>
-<button style="background: url(none.png)" alt = "champ 5" id = "champ5" class = "champion" onclick="showDropdown(4)"></button>
+<button style="background-image: url(none.png)" alt = "champ 5" id = "champ5" class = "champion" onclick="showDropdown(); tempid = 'champ5'"></button>
 <img src="none.png" alt = "spell 1" id = "spell3" class = "primary";>
 <img src="none.png" alt = "spell 2" id = "spell4" class = "secondary";>
 <img src="none.png" alt = "boots" id = "boots2" class = "boots";>

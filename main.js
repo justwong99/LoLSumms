@@ -9,15 +9,13 @@ function handle(e){
             search();
         }
     }
-var champnum = 0;
-function change(value, champnum){
-	var champ =document.getElementsByClassName("champion")[champnum];
-	champ.style = ("background: url(Champions/" + value + ".png)");
+var tempid = "";
+function change(value){	
+	$("#" + tempid).css("background-image", "url(Champions/" + value + ".png)");
 	
 }
-function showDropdown(num) {
-	champnum = num;
-    document.getElementById("myDropdown").classList.toggle("show");
+function showDropdown(){
+   $("#myDropdown").toggleClass("show");
 }
 
 // Close the dropdown menu if the user clicks outside of it
