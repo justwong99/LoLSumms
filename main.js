@@ -10,17 +10,58 @@ function handle(e){
         }
     }
 var tempid = "";
-function change(value){	
-	$("#" + tempid).css("background-image", "url(Champions/" + value + ".png)");
+function change(champ){	
+	$("#" + tempid).css("background-image", "url(Champions/" + champ + ".png)");
 	
 }
+function changeSpell(spell){ 
+  $("#" + tempid).css("background-image", "url(Spells/" + spell + ".png)");
+  
+}
 function showDropdown(){
-   $("#myDropdown").toggleClass("show");
+hideBar();
+
+
+  $("#myDropdown").toggleClass("show");
+}
+function showSpellDropdown(){
+hideBar();
+
+   $("#mySpellDropdown").toggleClass("show");
+}
+function test(){
+  alert("xd");
+}
+function hideBar(){
+   var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
 }
 
-// Close the dropdown menu if the user clicks outside of it
+
+
+
+var spellToggle = false;
+
+function toggleSpell(){
+
+  if (spellToggle == false){
+
+      spellToggle = true;
+      $("#checkbox").css("background-image", "url(checkmark.png)");
+  }
+  else{
+    spellToggle = false;
+    $("#checkbox").css("background-image", "none");
+  }
+}
 window.onclick = function(event) {
-  if (!event.target.matches('.champion')) {
+  if (!event.target.matches('button') ) {
 
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
@@ -31,4 +72,12 @@ window.onclick = function(event) {
       }
     }
   }
+}
+
+function checkspell(){
+if (spellToggle == true){
+  showSpellDropdown();
+}
+
+
 }

@@ -2,13 +2,12 @@
 
 <head>
 <link rel="stylesheet" type="text/css" href="ingamestyle.css">
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="main.js"></script>
+
 <title>LoLSumms</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -25,14 +24,14 @@
 
 
 <div class="container" id="main">
+  <div class = "changebar">
+  <h2 id = "summstext" title = "When this box is checked, clicking the summoner spells will allow you to change them instead of starting a cooldown timer.">Change Summoner Spells</h2>
+  <button alt = "checkbox" id = "checkbox" onclick="toggleSpell()" title = "When this box is checked, clicking the summoner spells will allow you to change them instead of starting a cooldown timer." ></button>
+</div>
 	<div class="dropdown">
-<button style="background-image: url(none.png)" alt = "champ 1" id = "champ1" class = "champion" onclick="showDropdown(); tempid = 'champ1' "></button>
+<button style="background-image: url(none.png)" alt = "champ 1" id = "champ1" class = "champion" onclick="showDropdown(); tempid = 'champ1'"></button>
 	<div id="myDropdown" class="dropdown-content">
-    <a href="#" onClick = "change('Aatrox')">Aatrox</a>
-    <a href="#" onClick = "change('Ahri')">Ahri</a>
-  	<a href="#" onClick = "change('Akali')">Akali</a>
-  	<a href="#" onClick = "change('Alistar')">Alistar</a>
-  	<a href="#" onClick = "change('Amumu')">Amumu</a>
+    <a href="#" onClick = "change('Aatrox')">Aatrox</a> 
   	<a href="#" onClick = "change('AurelionSol')">Aurelion Sol</a>
   	<a href="#" onClick = "change('Azir')">Azir</a>
   	<a href="#" onClick = "change('Bard')">Bard</a>
@@ -160,33 +159,51 @@
   	<a href="#" onClick = "change('Zilean')">Zilean</a>
   	<a href="#" onClick = "change('Zyra')">Zyra</a>
   </div>
-
-<img src="none.png" alt = "spell 1" id = "spell1" class = "primary";>
-<img src="none.png" alt = "spell 2" id = "spell2" class = "secondary";>
+  <div id="mySpellDropdown" class="dropdown-content">
+<a href="#" onClick = "changeSpell('Barrier')">Barrier</a>
+<a href="#" onClick = "changeSpell('Clarity')">Clarity</a>
+<a href="#" onClick = "changeSpell('Cleanse')">Cleanse</a>
+<a href="#" onClick = "changeSpell('Exhaust')">Exhaust</a>
+<a href="#" onClick = "changeSpell('Flash')">Flash</a>
+<a href="#" onClick = "changeSpell('Ghost')">Ghost</a>
+<a href="#" onClick = "changeSpell('Heal')">Heal</a>
+<a href="#" onClick = "changeSpell('Ignite')">Ignite</a>
+<a href="#" onClick = "changeSpell('Mark')">Mark</a>
+<a href="#" onClick = "changeSpell('Smite')">Smite</a>
+<a href="#" onClick = "changeSpell('Teleport')">Teleport</a>
+</div>
+<button style="background-image: url(Spells/Ignite.png)" alt = "spell 1" id = "spell1" class = "spell" onclick= " tempid = 'spell1'; checkspell() "></button>
+<button style="background-image: url(Spells/Flash.png)" alt = "spell 2" id = "spell2" class = "spell" onclick= " tempid = 'spell2'; checkspell() "></button>
 <img src="none.png" alt = "boots" id = "boots1" class = "boots";>
 <img src="none.png" alt = "insight"  id = "insight1" class = "insight";>
 <br/>
+
+
+
+
+
 <button style="background-image: url(none.png)" alt = "champ 2" id = "champ2" class = "champion" onclick="showDropdown(); tempid = 'champ2' "></button>
-<img src="none.png" alt = "spell 1" id = "spell3" class = "primary";>
-<img src="none.png" alt = "spell 2" id = "spell4" class = "secondary";>
+
+<button style="background-image: url(Spells/Ignite.png)" alt = "spell 3" id = "spell3" class = "spell" onclick= " tempid = 'spell3'; checkspell() "></button>
+<button style="background-image: url(Spells/Flash.png)" alt = "spell 3" id = "spell4" class = "spell" onclick= " tempid = 'spell4'; checkspell() "></button>
 <img src="none.png" alt = "boots" id = "boots2" class = "boots";>
 <img src="none.png" alt = "insight"  id = "insight2" class = "insight";>
 <br/>
 <button style="background-image: url(none.png)" alt = "champ 3" id = "champ3" class = "champion" onclick="showDropdown(); tempid = 'champ3' "></button>
-<img src="none.png" alt = "spell 1" id = "spell3" class = "primary";>
-<img src="none.png" alt = "spell 2" id = "spell4" class = "secondary";>
+<button style="background-image: url(Spells/Ignite.png)" alt = "spell 5" id = "spell5" class = "spell" onclick= " tempid = 'spell5'; checkspell() "></button>
+<button style="background-image: url(Spells/Flash.png)" alt = "spell 6" id = "spell6" class = "spell" onclick= " tempid = 'spell6'; checkspell() "></button>
 <img src="none.png" alt = "boots" id = "boots2" class = "boots";>
 <img src="none.png" alt = "insight"  id = "insight2" class = "insight";>
 <br/>
 <button style="background-image: url(none.png)" alt = "champ 4" id = "champ4" class = "champion" onclick="showDropdown(); tempid = 'champ4'"></button>
-<img src="none.png" alt = "spell 1" id = "spell3" class = "primary";>
-<img src="none.png" alt = "spell 2" id = "spell4" class = "secondary";>
+<button style="background-image: url(Spells/Ignite.png)" alt = "spell 7" id = "spell7" class = "spell" onclick= " tempid = 'spell7'; checkspell() "></button>
+<button style="background-image: url(Spells/Flash.png)" alt = "spell 8" id = "spell8" class = "spell" onclick= " tempid = 'spell8'; checkspell() "></button>
 <img src="none.png" alt = "boots" id = "boots2" class = "boots";>
 <img src="none.png" alt = "insight"  id = "insight2" class = "insight";>
 <br/>
 <button style="background-image: url(none.png)" alt = "champ 5" id = "champ5" class = "champion" onclick="showDropdown(); tempid = 'champ5'"></button>
-<img src="none.png" alt = "spell 1" id = "spell3" class = "primary";>
-<img src="none.png" alt = "spell 2" id = "spell4" class = "secondary";>
+<button style="background-image: url(Spells/Ignite.png)" alt = "spell 9" id = "spell9" class = "spell" onclick= " tempid = 'spell9'; checkspell() "></button>
+<button style="background-image: url(Spells/Flash.png)" alt = "spell 10" id = "spell10" class = "spell" onclick= " tempid = 'spell10'; checkspell() "></button>
 <img src="none.png" alt = "boots" id = "boots2" class = "boots";>
 <img src="none.png" alt = "insight"  id = "insight2" class = "insight";>
 </div>
@@ -196,4 +213,7 @@
 
 
 </body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </html>

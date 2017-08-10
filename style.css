@@ -9,9 +9,10 @@ h1{
 	
 	
 }
+
 #custom{
 	position: relative;
-	font-weight: lighter;
+font-weight: lighter;
 	font-family: roboto;
 	color: white;
 	font-size: 36px;
@@ -20,7 +21,6 @@ h1{
 }
 #about{
 	position:relative;
-	
 	font-weight: lighter;
 	font-family: roboto;
 	color: white;
@@ -31,7 +31,6 @@ h1{
 }
 #home{
 	position:relative;
-	
 	font-weight: lighter;
 	font-family: roboto;
 	color: white;
@@ -41,7 +40,6 @@ h1{
 }
 #description{
 	position: relative;
-	font-weight: bold;
 	font-family: roboto;
 	color: white;
 	font-size: 60px;

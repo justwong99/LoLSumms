@@ -49,7 +49,7 @@ nav{
 }
 #descriptiontitle{
 	position: relative;
-	font-weight: bold;
+	font-weight: normal;
 	font-family: roboto;
 	color: white;
 	font-size: 60px;
@@ -61,7 +61,7 @@ nav{
 }
 #description{
 position: relative;
-	font-weight: bold;
+	font-weight: normal;
 	font-family: roboto;
 	color: white;
 	font-size: 36px;

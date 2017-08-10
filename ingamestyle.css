@@ -5,10 +5,7 @@ body{
 	position: relative; 
 float: left;
 }
-h1{
-	
-	
-}
+
 #custom{
 	position: relative;
 	font-weight: lighter;
@@ -31,7 +28,6 @@ h1{
 }
 #home{
 	position:relative;
-	
 	font-weight: lighter;
 	font-family: roboto;
 	color: white;
@@ -46,14 +42,42 @@ nav{
 	text-align:right;
 	line-height: 60px;
 	padding: 30px;
+	margin-bottom: -20px
+
 }
+#summstext{
+	position: relative;
+	font-weight: lighter;
+	font-family: roboto;
+	color: white;
+	font-size: 36px;
+	margin: 20px;
+	vertical-align: middle;
+	display: inline-block;
 
+}
+.changebar{
+	position: relative;
+	text-align: center;
+	width: 100%;
 
+}
+#checkbox{
+	position: relative;
+	height: 32px;
+	width: 32px;
+	background-position: center;
+	background-size: contain;
+	vertical-align: middle;
+	background-color: Transparent;
+
+}
 #main{
 	position: relative;
 	width: 100%;
 	text-align: center;
 }
+
 .champion{
 	position: relative;
 	margin-right: 20px;
@@ -65,15 +89,23 @@ nav{
 	background-position: center;
 	background-size: contain;
 }
-.primary{
+.spell{
 	position: relative;
-	margin-left: 20px;
-	left: 1px;
+	height: 128px;
+	width: 128px;
+	background-size: contain;
 }
-.secondary{
-	position: relative;
+#spell1, #spell3, #spell5, #spell7, #spell9{
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+#spell2, #spell4, #spell6, #spell8, #spell10{
 	margin-right: 20px;
-	right: 1px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
 }
 .boots{
 	position: relative;
@@ -100,6 +132,10 @@ button{
     background-color: #3e8e41;
 
 }
+.primary:hover, .primary:focus {
+    background-color: #3e8e41;
+
+}
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -109,7 +145,7 @@ button{
 }
 
 /* Dropdown Content (Hidden by Default) */
-.dropdown-content {
+#myDropdown {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -119,11 +155,26 @@ button{
      max-height: 440px;/* you can change as you need it */
    overflow:auto;/* to get scroll */
 }
-
+#myDropdown a{
+	padding: 2px 3px;
+}
+#mySpellDropdown{
+	display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 240px;
+     max-height: 440px;/* you can change as you need it */
+   overflow:auto;/* to get scroll */
+}
+#mySpellDropdown a{
+	padding: 6px 9px;
+}
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: black;
-    padding: 2px 3px;
+    color: black; 
     text-decoration: none;
     display: block;
 }
