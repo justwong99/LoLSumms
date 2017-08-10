@@ -113,6 +113,10 @@ nav{
 	margin-left: 20px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	height: 128px;
+	width: 128px;
+	background-position: center;
+	background-size: contain;
 }
 .insight{
 	position: relative;
@@ -120,6 +124,10 @@ nav{
 	margin-left: 20px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	height: 128px;
+	width: 128px;
+	background-position: center;
+	background-size: contain;
 }
 button{
 	vertical-align: top;

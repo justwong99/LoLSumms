@@ -20,8 +20,6 @@ function changeSpell(spell){
 }
 function showDropdown(){
 hideBar();
-
-
   $("#myDropdown").toggleClass("show");
 }
 function showSpellDropdown(){
@@ -53,7 +51,7 @@ function toggleSpell(){
   if (spellToggle == false){
 
       spellToggle = true;
-      $("#checkbox").css("background-image", "url(checkmark.png)");
+      $("#checkbox").css("background-image", "url(Other/checkmark.png)");
   }
   else{
     spellToggle = false;
