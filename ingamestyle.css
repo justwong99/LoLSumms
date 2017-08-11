@@ -94,6 +94,17 @@ nav{
 	height: 128px;
 	width: 128px;
 	background-size: contain;
+	text-align: center;
+	font-size: 48px;
+	font-family: roboto;
+	color: white;
+	text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+}
+.overlay{
+	height: 128px;
+	width: 128px;
+	color: black;
+	position: absolute;
 }
 #spell1, #spell3, #spell5, #spell7, #spell9{
 	margin-left: 20px;
@@ -117,6 +128,7 @@ nav{
 	width: 128px;
 	background-position: center;
 	background-size: contain;
+
 }
 .insight{
 	position: relative;

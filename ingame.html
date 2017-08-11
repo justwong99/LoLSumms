@@ -5,7 +5,7 @@
 
 <title>LoLSumms</title>
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 <!-- Latest compiled and minified JavaScript -->
 
 </head>
@@ -26,10 +26,10 @@
 <div class="container" id="main">
   <div class = "changebar">
   <h2 id = "summstext" title = "When this box is checked, clicking the summoner spells will allow you to change them instead of starting a cooldown timer.">Change Summoner Spells</h2>
-  <button alt = "checkbox" id = "checkbox" onclick="toggleSpell()" title = "When this box is checked, clicking the summoner spells will allow you to change them instead of starting a cooldown timer." ></button>
+  <button alt = "checkbox" id = "checkbox" onclick="toggleSpell(); hideBar()" title = "When this box is checked, clicking the summoner spells will allow you to change them instead of starting a cooldown timer." ></button>
 </div>
   <div class="dropdown">
-<button style="background-image: url(Other/none.png)" alt = "champ 1" id = "champ1" class = "champion" onclick="showDropdown(); tempid = 'champ1'"></button>
+<button style="background-image: url(Other/none.png)" alt = "champ 1" id = "champ1" class = "champion"></button>
   <div id="myDropdown" class="dropdown-content">
     <a href="#" onClick = "change('Aatrox')">Aatrox</a> 
     <a href="#" onClick = "change('AurelionSol')">Aurelion Sol</a>
@@ -160,20 +160,20 @@
     <a href="#" onClick = "change('Zyra')">Zyra</a>
   </div>
   <div id="mySpellDropdown" class="dropdown-content">
-<a href="#" onClick = "changeSpell('Barrier')">Barrier</a>
-<a href="#" onClick = "changeSpell('Clarity')">Clarity</a>
-<a href="#" onClick = "changeSpell('Cleanse')">Cleanse</a>
-<a href="#" onClick = "changeSpell('Exhaust')">Exhaust</a>
-<a href="#" onClick = "changeSpell('Flash')">Flash</a>
-<a href="#" onClick = "changeSpell('Ghost')">Ghost</a>
-<a href="#" onClick = "changeSpell('Heal')">Heal</a>
-<a href="#" onClick = "changeSpell('Ignite')">Ignite</a>
-<a href="#" onClick = "changeSpell('Mark')">Mark</a>
-<a href="#" onClick = "changeSpell('Smite')">Smite</a>
-<a href="#" onClick = "changeSpell('Teleport')">Teleport</a>
+<a href="#" class = "spell-choice" id = "Barrier" >Barrier</a>
+<a href="#" class = "spell-choice"id = "Clarity" >Clarity</a>
+<a href="#" class = "spell-choice"id = "Cleanse" >Cleanse</a>
+<a href="#" class = "spell-choice"id = "Exhaust" >Exhaust</a>
+<a href="#" class = "spell-choice"id = "Flash" >Flash</a>
+<a href="#" class = "spell-choice"id =  "Ghost" >Ghost</a>
+<a href="#" class = "spell-choice"id = "Heal" >Heal</a>
+<a href="#" class = "spell-choice"id = "Ignite">Ignite</a>
+<a href="#" class = "spell-choice"id = "Mark" >Mark</a>
+<a href="#" class = "spell-choice"id = "Smite">Smite</a>
+<a href="#" class = "spell-choice"id = "Teleport">Teleport</a>
 </div>
-<button style="background-image: url(Spells/Ignite.png)" alt = "spell 1" id = "spell1" class = "spell" onclick= " tempid = 'spell1'; checkspell() "></button>
-<button style="background-image: url(Spells/Flash.png)" alt = "spell 2" id = "spell2" class = "spell" onclick= " tempid = 'spell2'; checkspell() "></button>
+<button style="background-image: url(Spells/Ignite.png)" alt = "spell 1" id = "spell1" class = "spell spell-Ignite" > <div class = "overlay"></div></button>
+<button style="background-image: url(Spells/Flash.png)" alt = "spell 2" id = "spell2" class = "spell spell-Flash" ></button>
 <button style="background-image: url(Other/Boots.png)" alt = "boots" id = "boots1" class = "boots" ></button>
 <button style="background-image: url(Other/Insight.png)" alt = "insight" id = "insight1" class = "insight" ></button>
 <br/>
@@ -182,28 +182,28 @@
 
 
 
-<button style="background-image: url(Other/none.png)" alt = "champ 2" id = "champ2" class = "champion" onclick="showDropdown(); tempid = 'champ2' "></button>
+<button style="background-image: url(Other/none.png)" alt = "champ 2" id = "champ2" class = "champion" ></button>
 
-<button style="background-image: url(Spells/Ignite.png)" alt = "spell 3" id = "spell3" class = "spell" onclick= " tempid = 'spell3'; checkspell() "></button>
-<button style="background-image: url(Spells/Flash.png)" alt = "spell 3" id = "spell4" class = "spell" onclick= " tempid = 'spell4'; checkspell() "></button>
+<button style="background-image: url(Spells/Ignite.png)" alt = "spell 3" id = "spell3" class = "spell spell-Ignite" ></button>
+<button style="background-image: url(Spells/Flash.png)" alt = "spell 3" id = "spell4" class = "spell spell-Flash" ></button>
 <button style="background-image: url(Other/Boots.png)" alt = "boots" id = "boots2" class = "boots" ></button>
 <button style="background-image: url(Other/Insight.png)" alt = "insight" id = "insight2" class = "insight" ></button>
 <br/>
-<button style="background-image: url(Other/none.png)" alt = "champ 3" id = "champ3" class = "champion" onclick="showDropdown(); tempid = 'champ3' "></button>
-<button style="background-image: url(Spells/Ignite.png)" alt = "spell 5" id = "spell5" class = "spell" onclick= " tempid = 'spell5'; checkspell() "></button>
-<button style="background-image: url(Spells/Flash.png)" alt = "spell 6" id = "spell6" class = "spell" onclick= " tempid = 'spell6'; checkspell() "></button>
+<button style="background-image: url(Other/none.png)" alt = "champ 3" id = "champ3" class = "champion" ></button>
+<button style="background-image: url(Spells/Ignite.png)" alt = "spell 5" id = "spell5" class = "spell spell-Ignite" ></button>
+<button style="background-image: url(Spells/Flash.png)" alt = "spell 6" id = "spell6" class = "spell spell-Flash" ></button>
 <button style="background-image: url(Other/Boots.png)" alt = "boots" id = "boots3" class = "boots" ></button>
 <button style="background-image: url(Other/Insight.png)" alt = "insight" id = "insight3" class = "insight" ></button>
 <br/>
-<button style="background-image: url(Other/none.png)" alt = "champ 4" id = "champ4" class = "champion" onclick="showDropdown(); tempid = 'champ4'"></button>
-<button style="background-image: url(Spells/Ignite.png)" alt = "spell 7" id = "spell7" class = "spell" onclick= " tempid = 'spell7'; checkspell() "></button>
-<button style="background-image: url(Spells/Flash.png)" alt = "spell 8" id = "spell8" class = "spell" onclick= " tempid = 'spell8'; checkspell() "></button>
+<button style="background-image: url(Other/none.png)" alt = "champ 4" id = "champ4" class = "champion" ></button>
+<button style="background-image: url(Spells/Ignite.png)" alt = "spell 7" id = "spell7" class = "spell spell-Ignite" ></button>
+<button style="background-image: url(Spells/Flash.png)" alt = "spell 8" id = "spell8" class = "spell spell-Flash" ></button>
 <button style="background-image: url(Other/Boots.png)" alt = "boots" id = "boots4" class = "boots" ></button>
 <button style="background-image: url(Other/Insight.png)" alt = "insight" id = "insight4" class = "insight" ></button>
 <br/>
-<button style="background-image: url(Other/none.png)" alt = "champ 5" id = "champ5" class = "champion" onclick="showDropdown(); tempid = 'champ5'"></button>
-<button style="background-image: url(Spells/Ignite.png)" alt = "spell 9" id = "spell9" class = "spell" onclick= " tempid = 'spell9'; checkspell() "></button>
-<button style="background-image: url(Spells/Flash.png)" alt = "spell 10" id = "spell10" class = "spell" onclick= " tempid = 'spell10'; checkspell() "></button>
+<button style="background-image: url(Other/none.png)" alt = "champ 5" id = "champ5" class = "champion"></button>
+<button style="background-image: url(Spells/Ignite.png)" alt = "spell 9" id = "spell9" class = "spell spell-Ignite" ></button>
+<button style="background-image: url(Spells/Flash.png)" alt = "spell 10" id = "spell10" class = "spell spell-Flash" ></button>
 <button style="background-image: url(Other/Boots.png)" alt = "boots" id = "boots5" class = "boots" ></button>
 <button style="background-image: url(Other/Insight.png)" alt = "insight" id = "insight5" class = "insight" ></button>
 </div>
@@ -216,4 +216,5 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="main.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </html>
