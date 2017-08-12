@@ -70,7 +70,12 @@ function change(champ){
 }
 function changeSpell(spell){ 
   $("#" + tempspellid).css("background-image", "url(Spells/" + spell + ".png)");
-  
+  var secondClass = "spell-" + (spell);
+  removeSpell(tempspellid);
+  $("#" + tempspellid).addClass(secondClass);
+  clearInterval(timers[IdToNum[tempspellid]]);
+  document.getElementById(tempspellid).innerHTML = "";
+  running[IdToNum[tempspellid]] = false;
 }
 function showDropdown(){
 hideBar();
@@ -98,7 +103,7 @@ var spellcooldown = new Array(10);
   var value = 5;
 function getCooldown(){
   var tempcooldown = $("#" + tempspellid).prop("classList");
-  spellcooldown[IdToNum[tempspellid]] = summs[tempcooldown[1]];
+  spellcooldown = summs[tempcooldown[1]];
 }
 function startCount(spellid, seconds){
   var tempImg = $("#" + spellid).prop("classList");
@@ -106,15 +111,23 @@ function startCount(spellid, seconds){
   var buttonNum = document.getElementById(spellid);
   buttonNum.innerHTML = seconds;
   var interval = setInterval(function(){
+    if (seconds > 1){
     seconds--;
     buttonNum.innerHTML = seconds;
-    
+    }
+    else if (seconds == 1){
+      running[IdToNum[tempspellid]] = false;
+  clearInterval(timers[IdToNum[spellid]]);
+  var tempImg = $("#" + tempspellid).prop("classList");
+  $("#" + tempspellid).css("background-image", "url(Spells/" + sumSwitch[tempImg[1]] +".png)");
+  document.getElementById(tempspellid).innerHTML = "";
+    }
   },1000);
    timers[IdToNum[spellid]] = interval;
 
 }
 
-function stopCount(){
+function stopCount(spellid){
   clearInterval(timers[IdToNum[tempspellid]]);
 }
 
@@ -167,7 +180,7 @@ $( ".spell" ).click(function() {
   if (running[IdToNum[tempspellid]] == false){
     running[IdToNum[tempspellid]] = true;
   getCooldown();
-  startCount(tempspellid, spellcooldown[IdToNum[tempspellid]]);
+  startCount(tempspellid, spellcooldown);
  }
 
 else{
@@ -182,7 +195,5 @@ else{
 
 $( ".spell-choice" ).click(function() {
   changeSpell(this.id);
-  var secondClass = "spell-" + (this.id);
-  removeSpell(tempspellid);
-  $("#" + tempspellid).addClass(secondClass);
+  
 });
