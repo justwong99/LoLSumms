@@ -26,10 +26,36 @@ sumSwitch['spell-Mark'] = "Mark";
 sumSwitch['spell-Smite'] = "Smite";
 sumSwitch['spell-Teleport'] = "Teleport";
 
+var IdToNum = new Array();
+IdToNum['spell1'] = 0;
+IdToNum['spell2'] = 1;
+IdToNum['spell3'] = 2;
+IdToNum['spell4'] = 3;
+IdToNum['spell5'] = 4;
+IdToNum['spell6'] = 5;
+IdToNum['spell7'] = 6;
+IdToNum['spell8'] = 7;
+IdToNum['spell9'] = 8;
+IdToNum['spell10'] = 9;
+
+
+var timers = new Array(10);
+
+var running = new Array(10);
+running[0] = false;
+running[1] = false;
+running[2] = false;
+running[3] = false;
+running[4] = false;
+running[5] = false;
+running[6] = false;
+running[7] = false;
+running[8] = false;
+running[9] = false;
 function search(){
-	var x = document.getElementById('summoner').value;
-	alert(x);
-	window.location.href = "ingame.html";
+  var x = document.getElementById('summoner').value;
+  alert(x);
+  window.location.href = "ingame.html";
 }
 function handle(e){
         if(e.keyCode === 13){
@@ -38,9 +64,9 @@ function handle(e){
         }
     }
 
-function change(champ){	
-	$("#" + tempid).css("background-image", "url(Champions/" + champ + ".png)");
-	
+function change(champ){ 
+  $("#" + tempid).css("background-image", "url(Champions/" + champ + ".png)");
+  
 }
 function changeSpell(spell){ 
   $("#" + tempspellid).css("background-image", "url(Spells/" + spell + ".png)");
@@ -68,36 +94,28 @@ function hideBar(){
       }
     }
 }
-var spellcooldown;
-  var timer;
+var spellcooldown = new Array(10);
+  var value = 5;
 function getCooldown(){
   var tempcooldown = $("#" + tempspellid).prop("classList");
-  spellcooldown = summs[tempcooldown[1]];
+  spellcooldown[IdToNum[tempspellid]] = summs[tempcooldown[1]];
 }
-function startCount(){
-  if(!timer){
-    var tempImg = $("#" + tempspellid).prop("classList");
-    $("#" + tempspellid).css("background-image", "url(Spells/" + sumSwitch[tempImg[1]] +"2.png)");
-   document.getElementById(tempspellid).innerHTML = spellcooldown;
-  timer = setInterval("countdown()", 1000);
-}
-else{
-  var tempImg = $("#" + tempspellid).prop("classList");
-    $("#" + tempspellid).css("background-image", "url(Spells/" + sumSwitch[tempImg[1]] +".png)");
-  clearInterval(timer);
-    timer = false;
+function startCount(spellid, seconds){
+  var tempImg = $("#" + spellid).prop("classList");
+    $("#" + spellid).css("background-image", "url(Spells/" + sumSwitch[tempImg[1]] +"2.png)");
+  var buttonNum = document.getElementById(spellid);
+  buttonNum.innerHTML = seconds;
+  var interval = setInterval(function(){
+    seconds--;
+    buttonNum.innerHTML = seconds;
+    
+  },1000);
+   timers[IdToNum[spellid]] = interval;
 
-  document.getElementById(tempspellid).style.opacity = "1";
-  document.getElementById(tempspellid).innerHTML = "";
 }
-}
-function countdown(){
-   spellcooldown--;
-   document.getElementById(tempspellid).innerHTML = spellcooldown;
-   if (spellcooldown == 0){
-    clearInterval(timer);
-    timer = false;
-   }
+
+function stopCount(){
+  clearInterval(timers[IdToNum[tempspellid]]);
 }
 
 
@@ -146,9 +164,20 @@ $( ".spell" ).click(function() {
   showSpellDropdown();
 }
  else{
+  if (running[IdToNum[tempspellid]] == false){
+    running[IdToNum[tempspellid]] = true;
   getCooldown();
-  startCount();
+  startCount(tempspellid, spellcooldown[IdToNum[tempspellid]]);
  }
+
+else{
+  running[IdToNum[tempspellid]] = false;
+  clearInterval(timers[IdToNum[tempspellid]]);
+  var tempImg = $("#" + tempspellid).prop("classList");
+  $("#" + tempspellid).css("background-image", "url(Spells/" + sumSwitch[tempImg[1]] +".png)");
+  document.getElementById(tempspellid).innerHTML = "";
+}
+}
 });
 
 $( ".spell-choice" ).click(function() {
