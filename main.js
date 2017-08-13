@@ -38,6 +38,20 @@ IdToNum['spell8'] = 7;
 IdToNum['spell9'] = 8;
 IdToNum['spell10'] = 9;
 
+var BootsToChamp = new Array();
+BootsToChamp['boots1'] = 0;
+BootsToChamp['boots2'] = 1;
+BootsToChamp['boots3'] = 2;
+BootsToChamp['boots4'] = 3;
+BootsToChamp['boots5'] = 4;
+
+var InsightToChamp = new Array();
+InsightToChamp['insight1'] = 0;
+InsightToChamp['insight2'] = 1;
+InsightToChamp['insight3'] = 2;
+InsightToChamp['insight4'] = 3;
+InsightToChamp['insight5'] = 4;
+
 
 var timers = new Array(10);
 
@@ -52,9 +66,42 @@ running[6] = false;
 running[7] = false;
 running[8] = false;
 running[9] = false;
+
+var multiplier = new Array();
+multiplier[0] = 1;
+multiplier[1] = 1;
+multiplier[2] = 1;
+multiplier[3] = 1;
+multiplier[4] = 1;
+
+var IdToChamp = new Array();
+IdToChamp['spell1'] = 0; 
+IdToChamp['spell2'] = 0; 
+IdToChamp['spell3'] = 1; 
+IdToChamp['spell4'] = 1; 
+IdToChamp['spell5'] = 2; 
+IdToChamp['spell6'] = 2; 
+IdToChamp['spell7'] = 3; 
+IdToChamp['spell8'] = 3; 
+IdToChamp['spell9'] = 4; 
+IdToChamp['spell10'] = 4; 
+
+var bootsToggle = new Array();
+bootsToggle[0] = false;
+bootsToggle[1] = false;
+bootsToggle[2] = false;
+bootsToggle[3] = false;
+bootsToggle[4] = false;
+
+var insightToggle = new Array();
+insightToggle[0] = false;
+insightToggle[1] = false;
+insightToggle[2] = false;
+insightToggle[3] = false;
+insightToggle[4] = false;
+
 function search(){
   var x = document.getElementById('summoner').value;
-  alert(x);
   window.location.href = "ingame.html";
 }
 function handle(e){
@@ -76,6 +123,30 @@ function changeSpell(spell){
   clearInterval(timers[IdToNum[tempspellid]]);
   document.getElementById(tempspellid).innerHTML = "";
   running[IdToNum[tempspellid]] = false;
+}
+function changeBoots(boots){
+  if (bootsToggle[BootsToChamp[boots]] == false){
+    bootsToggle[BootsToChamp[boots]] = true;
+    $("#" + boots).css("background-image", "url(Other/Boots2.png)");
+    multiplier[BootsToChamp[boots]] -= 0.1;
+  }
+  else{
+  bootsToggle[BootsToChamp[boots]] = false;
+    $("#" + boots).css("background-image", "url(Other/Boots.png)");
+    multiplier[BootsToChamp[boots]] += 0.1;
+}
+}
+function changeInsight(insight){
+  if (insightToggle[InsightToChamp[insight]] == false){
+    insightToggle[InsightToChamp[insight]] = true;
+    $("#" + insight).css("background-image", "url(Other/Insight2.png)");
+    multiplier[InsightToChamp[insight]] -= 0.15;
+  }
+  else{
+  insightToggle[InsightToChamp[insight]] = false;
+    $("#" + insight).css("background-image", "url(Other/Insight.png)");
+    multiplier[InsightToChamp[insight]] += 0.15;
+}
 }
 function showDropdown(){
 hideBar();
@@ -103,7 +174,7 @@ var spellcooldown = new Array(10);
   var value = 5;
 function getCooldown(){
   var tempcooldown = $("#" + tempspellid).prop("classList");
-  spellcooldown = summs[tempcooldown[1]];
+  spellcooldown = Math.round(summs[tempcooldown[1]] * multiplier[IdToChamp[tempspellid]]);
 }
 function startCount(spellid, seconds){
   var tempImg = $("#" + spellid).prop("classList");
@@ -196,4 +267,10 @@ else{
 $( ".spell-choice" ).click(function() {
   changeSpell(this.id);
   
+});
+$( ".boots" ).click(function() {
+  changeBoots(this.id); 
+});
+$( ".insight" ).click(function() {
+  changeInsight(this.id); 
 });
