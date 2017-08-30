@@ -110,8 +110,8 @@ function search(){
       data: {name: x, region: y},
       dataType: "json",
       success: function(data){
-        alert(data);
-  
+        alert(data[0]);
+
         success = true;
       },
       error: function(textStatus, errorThrow){
