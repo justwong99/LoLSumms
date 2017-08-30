@@ -56,17 +56,29 @@ font-weight: lighter;
 	font-weight: lighter;
 top: -50px;
 }
+#regionselect{
+	position: relative;
+	width: 70px;
+	height: 125px;
+	text-align: center;
+	font-family: roboto;
+	font-size: 24px;
+	top: -55px;
+	color:white;
+	background: rgba(0,0,0,0.5);
+	right: 5px;
+}
 #search-submit{
 	position: relative;
 	width: 180px;
 	height: 125px;
-	
+	text-align: center;
 	font-family: roboto;
 	font-size: 36px;
 	top: -50px;
 	color:white;
 	background: rgba(0,0,0,0.5);
-	right: 5px;
+	right: 10px;
 }
 input::placeholder{
 	position: relative;

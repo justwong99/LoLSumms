@@ -100,9 +100,27 @@ insightToggle[2] = false;
 insightToggle[3] = false;
 insightToggle[4] = false;
 
+var success = true;
+var inGameJson;
 function search(){
   var x = document.getElementById('summoner').value;
-  window.location.href = "ingame.html";
+  var y = document.getElementById('regionselect').value;
+    $.ajax({
+      url:'http://127.0.0.1:5000/info',
+      data: {name: x, region: y},
+      dataType: "json",
+      success: function(data){
+        alert(data);
+  
+        success = true;
+      },
+      error: function(textStatus, errorThrow){
+    success = false;
+    alert("Summoner not found");
+    window.location.reload();
+      }
+
+   });
 }
 function handle(e){
         if(e.keyCode === 13){
