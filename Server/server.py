@@ -16,7 +16,7 @@ def info():
     name = request.args.get('name')
     name.replace(" ", "")
     region = request.args.get('region')
-    api_key = "RGAPI-cb011e94-d156-4b13-9529-153a497b5e56"
+    api_key = "RGAPI-ae5a2b45-406f-4761-941a-f554e80ebec3"
     api_url = "https://" + region + ".api.riotgames.com/lol/summoner/v3/summoners/by-name/" + name + "?api_key=" + api_key 
     response = requests.get(api_url)
     summ_id = json.dumps(response.json()['id'])
@@ -27,7 +27,7 @@ def info():
         randomName = ((response2.json()['participants'][i]['summonerName']).lower()).replace(" ","")
         if (randomName == name):
             blue = False
-    if blue == True:
+    if blue == False:
         sideNum = 5
     for i in range (5):
         tempMasteries = []

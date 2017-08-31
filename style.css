@@ -99,9 +99,100 @@ nav{
 }
 
 
+#firstmain{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 255px;
+}
+
+
+
+/* new stuff*/
+
+#summstext{
+	position: relative;
+	font-weight: lighter;
+	font-family: roboto;
+	color: white;
+	font-size: 36px;
+	margin: 20px;
+	vertical-align: middle;
+	display: inline-block;
+
+}
+
 #main{
 	position: relative;
-	padding-top: 275px;
 	width: 100%;
-	text-align: center
+	text-align: center;
+	padding-top: 30px;
+	visibility: hidden;
+}
+
+.champion{
+	position: relative;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 128px;
+	width: 128px;
+	background-position: center;
+	background-size: contain;
+}
+.spell{
+	position: relative;
+	height: 128px;
+	width: 128px;
+	background-size: contain;
+	text-align: center;
+	font-size: 48px;
+	font-family: roboto;
+	color: white;
+	text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+}
+.overlay{
+	height: 128px;
+	width: 128px;
+	color: black;
+	position: absolute;
+}
+#spell1, #spell3, #spell5, #spell7, #spell9{
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+#spell2, #spell4, #spell6, #spell8, #spell10{
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+.boots{
+	position: relative;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 128px;
+	width: 128px;
+	background-position: center;
+	background-size: contain;
+
+}
+.insight{
+	position: relative;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 128px;
+	width: 128px;
+	background-position: center;
+	background-size: contain;
+}
+button{
+	vertical-align: top;
 }

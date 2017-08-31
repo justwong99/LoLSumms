@@ -52,25 +52,145 @@ InsightToChamp['insight3'] = 2;
 InsightToChamp['insight4'] = 3;
 InsightToChamp['insight5'] = 4;
 
-var ChampId = new Array(); 
-ChampId['266'] = "Aatrox"; ChampId['103'] = "Ahri"; ChampId['84'] = "Akali"; ChampId['12'] = "Alistar"; ChampId['32'] = "Amumu"; ChampId['34'] = "Anivia"; ChampId['1'] = "Annie";
-ChampId['22'] = "Ashe"; ChampId['136'] = "AurelionSol"; ChampId['268'] = "Azir"; ChampId['432'] = "Bard"; ChampId['53'] = "Blitzcrank"; ChampId['63'] = "Brand"; ChampId['201'] = "Braum"; ChampId['51'] = "Caitlyn";
-ChampId['164'] = "Camille"; ChampId['69'] = "Cassiopeia"; ChampId['31'] = "Chogath"; ChampId['42'] = "Corki"; ChampId['122'] = "Darius"; ChampId['131'] = "Diana"; ChampId['36'] = "DrMundo"; ChampId['119'] = "Draven";
-ChampId['245'] = "Ekko"; ChampId['60'] = "Elise"; ChampId['28'] = "Evelynn"; ChampId['81'] = "Ezreal"; ChampId['9'] = "Fiddlesticks"; ChampId['114'] = "Fiora"; ChampId['105'] = "Fizz"; ChampId['3'] = "Galio";
-ChampId['41'] = "Gangplank"; ChampId['86'] = "Garen"; ChampId['150'] = "Gnar"; ChampId['79'] = "Gragas"; ChampId['104'] = "Graves"; ChampId['120'] = "Hecarim"; ChampId['74'] = "Heimerdinger"; ChampId['420'] = "Illaoi";
-ChampId['39'] = "Irelia"; ChampId['427'] = "Ivern"; ChampId['40'] = "Janna"; ChampId['59'] = "JarvanIV"; ChampId['24'] = "Jax"; ChampId['126'] = "Jayce"; ChampId['202'] = "Jhin"; ChampId['222'] = "Jinx";
-ChampId['429'] = "Kalista"; ChampId['43'] = "Karma"; ChampId['38'] = "Kassadin"; ChampId['55'] = "Katarina"; ChampId['10'] = "Kayle"; ChampId['141'] = "Kayn"; ChampId['85'] = "Kennen"; ChampId['121'] = "Khazix";
-ChampId['203'] = "Kindred"; ChampId['240'] = "Kled"; ChampId['96'] = "KogMaw"; ChampId['7'] = "Leblanc"; ChampId['64'] = "LeeSin"; ChampId['89'] = "Leona"; ChampId['127'] = "Lissandra"; ChampId['236'] = "Lucian";
-ChampId['117'] = "Lulu"; ChampId['99'] = "Lux"; ChampId['54'] = "Malphite"; ChampId['90'] = "Malzahar"; ChampId['57'] = "Maokai"; ChampId['11'] = "MasterYi"; ChampId['21'] = "MissFortune"; ChampId['62'] = "MonkeyKing";
-ChampId['82'] = "Mordekaiser"; ChampId['25'] = "Morgana"; ChampId['267'] = "Nami"; ChampId['75'] = "Nasus"; ChampId['111'] = "Nautilus"; ChampId['76'] = "Nidalee"; ChampId['56'] = "Nocturne"; ChampId['20'] = "Nunu";
-ChampId['2'] = "Olaf"; ChampId['61'] = "Orianna"; ChampId['516'] = "Ornn"; ChampId['80'] = "Pantheon"; ChampId['78'] = "Poppy"; ChampId['133'] = "Quinn"; ChampId['497'] = "Rakan"; ChampId['33'] = "Rammus";
-ChampId['421'] = "RekSai"; ChampId['58'] = "Renekton"; ChampId['107'] = "Rengar"; ChampId['92'] = "Riven"; ChampId['68'] = "Rumble"; ChampId['13'] = "Ryze"; ChampId['113'] = "Sejuani"; ChampId['35'] = "Shaco";
-ChampId['98'] = "Shen"; ChampId['102'] = "Shyvana"; ChampId['27'] = "Singed"; ChampId['14'] = "Sion"; ChampId['15'] = "Sivir"; ChampId['72'] = "Skarner"; ChampId['37'] = "Sona"; ChampId['16'] = "Soraka";
-ChampId['50'] = "Swain"; ChampId['223'] = "TahmKench"; ChampId['163'] = "Taliyaah"; ChampId['91'] = "Talon"; ChampId['44'] = "Taric"; ChampId['17'] = "Teemo"; ChampId['412'] = "Thresh"; ChampId['18'] = "Tristana";
-ChampId['48'] = "Trundle"; ChampId['23'] = "Tryndamere"; ChampId['57'] = "TwistedFate"; ChampId['29'] = "Twitch"; ChampId['77'] = "Udyr"; ChampId['6'] = "Urgot"; ChampId['110'] = "Varus"; ChampId['67'] = "Vayne";
-ChampId['45'] = "Veigar"; ChampId['161'] = "Velkoz"; ChampId['112'] = "Viktor"; ChampId['8'] = "Vladimir"; ChampId['106'] = "Volibear"; ChampId['19'] = "Warwick"; ChampId['498'] = "Xayah"; ChampId['101'] = "Xerath";
-ChampId['5'] = "XinZhao"; ChampId['83'] = "Yorick"; ChampId['154'] = "Zac"; ChampId['238'] = "Zed"; ChampId['115'] = "Ziggs"; ChampId['26'] = "Zilean"; ChampId['143'] = "Zyra";
-
+var IdToChamp = new Array(); 
+IdToChamp['266'] = "Aatrox";
+IdToChamp['103'] = "Ahri";
+IdToChamp['84'] = "Akali";
+IdToChamp['12'] = "Alistar";
+IdToChamp['32'] = "Amumu";
+IdToChamp['34'] = "Anivia";
+IdToChamp['1'] = "Annie";
+IdToChamp['22'] = "Ashe";
+IdToChamp['136'] = "AurelionSol";
+IdToChamp['268'] = "Azir";
+IdToChamp['432'] = "Bard";
+IdToChamp['53'] = "Blitzcrank";
+IdToChamp['63'] = "Brand";
+IdToChamp['201'] = "Braum";
+IdToChamp['51'] = "Caitlyn";
+IdToChamp['164'] = "Camille";
+IdToChamp['69'] = "Cassiopeia";
+IdToChamp['31'] = "Chogath";
+IdToChamp['42'] = "Corki";
+IdToChamp['122'] = "Darius";
+IdToChamp['131'] = "Diana";
+IdToChamp['36'] = "DrMundo";
+IdToChamp['119'] = "Draven";
+IdToChamp['245'] = "Ekko";
+IdToChamp['60'] = "Elise";
+IdToChamp['28'] = "Evelynn";
+IdToChamp['81'] = "Ezreal";
+IdToChamp['9'] = "Fiddlesticks";
+IdToChamp['114'] = "Fiora";
+IdToChamp['105'] = "Fizz";
+IdToChamp['3'] = "Galio";
+IdToChamp['41'] = "Gangplank";
+IdToChamp['86'] = "Garen";
+IdToChamp['150'] = "Gnar";
+IdToChamp['79'] = "Gragas";
+IdToChamp['104'] = "Graves";
+IdToChamp['120'] = "Hecarim";
+IdToChamp['74'] = "Heimerdinger";
+IdToChamp['420'] = "Illaoi";
+IdToChamp['39'] = "Irelia";
+IdToChamp['427'] = "Ivern";
+IdToChamp['40'] = "Janna";
+IdToChamp['59'] = "JarvanIV";
+IdToChamp['24'] = "Jax";
+IdToChamp['126'] = "Jayce";
+IdToChamp['202'] = "Jhin";
+IdToChamp['222'] = "Jinx";
+IdToChamp['429'] = "Kalista";
+IdToChamp['43'] = "Karma";
+IdToChamp['30'] = "Karthus";
+IdToChamp['38'] = "Kassadin";
+IdToChamp['55'] = "Katarina";
+IdToChamp['10'] = "Kayle";
+IdToChamp['141'] = "Kayn";
+IdToChamp['85'] = "Kennen";
+IdToChamp['121'] = "Khazix";
+IdToChamp['203'] = "Kindred";
+IdToChamp['240'] = "Kled";
+IdToChamp['96'] = "KogMaw";
+IdToChamp['7'] = "Leblanc";
+IdToChamp['64'] = "LeeSin";
+IdToChamp['89'] = "Leona";
+IdToChamp['127'] = "Lissandra";
+IdToChamp['236'] = "Lucian";
+IdToChamp['117'] = "Lulu";
+IdToChamp['99'] = "Lux";
+IdToChamp['54'] = "Malphite";
+IdToChamp['90'] = "Malzahar";
+IdToChamp['57'] = "Maokai";
+IdToChamp['11'] = "MasterYi";
+IdToChamp['21'] = "MissFortune";
+IdToChamp['62'] = "MonkeyKing";
+IdToChamp['82'] = "Mordekaiser";
+IdToChamp['25'] = "Morgana";
+IdToChamp['267'] = "Nami";
+IdToChamp['75'] = "Nasus";
+IdToChamp['111'] = "Nautilus";
+IdToChamp['76'] = "Nidalee";
+IdToChamp['56'] = "Nocturne";
+IdToChamp['20'] = "Nunu";
+IdToChamp['2'] = "Olaf";
+IdToChamp['61'] = "Orianna";
+IdToChamp['516'] = "Ornn";
+IdToChamp['80'] = "Pantheon";
+IdToChamp['78'] = "Poppy";
+IdToChamp['133'] = "Quinn";
+IdToChamp['497'] = "Rakan";
+IdToChamp['33'] = "Rammus";
+IdToChamp['421'] = "RekSai";
+IdToChamp['58'] = "Renekton";
+IdToChamp['107'] = "Rengar";
+IdToChamp['92'] = "Riven";
+IdToChamp['68'] = "Rumble";
+IdToChamp['13'] = "Ryze";
+IdToChamp['113'] = "Sejuani";
+IdToChamp['35'] = "Shaco";
+IdToChamp['98'] = "Shen";
+IdToChamp['102'] = "Shyvana";
+IdToChamp['27'] = "Singed";
+IdToChamp['14'] = "Sion";
+IdToChamp['15'] = "Sivir";
+IdToChamp['72'] = "Skarner";
+IdToChamp['37'] = "Sona";
+IdToChamp['16'] = "Soraka";
+IdToChamp['50'] = "Swain";
+IdToChamp['134'] = "Syndra";
+IdToChamp['223'] = "TahmKench";
+IdToChamp['163'] = "Taliyaah";
+IdToChamp['91'] = "Talon";
+IdToChamp['44'] = "Taric";
+IdToChamp['17'] = "Teemo";
+IdToChamp['412'] = "Thresh";
+IdToChamp['18'] = "Tristana";
+IdToChamp['48'] = "Trundle";
+IdToChamp['23'] = "Tryndamere";
+IdToChamp['57'] = "TwistedFate";
+IdToChamp['29'] = "Twitch";
+IdToChamp['77'] = "Udyr";
+IdToChamp['6'] = "Urgot";
+IdToChamp['110'] = "Varus";
+IdToChamp['67'] = "Vayne";
+IdToChamp['45'] = "Veigar";
+IdToChamp['161'] = "Velkoz";
+IdToChamp['254'] = "Vi";
+IdToChamp['112'] = "Viktor";
+IdToChamp['8'] = "Vladimir";
+IdToChamp['106'] = "Volibear";
+IdToChamp['19'] = "Warwick";
+IdToChamp['498'] = "Xayah";
+IdToChamp['101'] = "Xerath";
+IdToChamp['5'] = "XinZhao";
+IdToChamp['157'] = "Yasuo";
+IdToChamp['83'] = "Yorick";
+IdToChamp['154'] = "Zac";
+IdToChamp['238'] = "Zed";
+IdToChamp['115'] = "Ziggs";
+IdToChamp['26'] = "Zilean";
+IdToChamp['142'] = "Zyra";
 
 var IdToSpell = new Array();
 IdToSpell['21'] = "Barrier";
@@ -135,13 +255,6 @@ insightToggle[2] = false;
 insightToggle[3] = false;
 insightToggle[4] = false;
 
-var checkInsight = new Array();
-checkInsight[0] = 0;
-checkInsight[1] = 0;
-checkInsight[2] = 0;
-checkInsight[3] = 0;
-checkInsight[4] = 0;
-
 var champions = new Array();
 
 function search(){
@@ -161,8 +274,7 @@ function search(){
         champions[3] = data[3];
         champions[4] = data[4];
         insertChamps();
-        insertInsight();
-        insertSpells();
+        
       },
       error: function(textStatus, errorThrow){
  
@@ -173,60 +285,12 @@ function search(){
    });
 }
 function insertChamps(){
-
-  $("#champ1").css("background-image", "url(Champions/" + ChampId[champions[0][0]] + ".png)");
-  $("#champ2").css("background-image", "url(Champions/" + ChampId[champions[1][0]] + ".png)");
-  $("#champ3").css("background-image", "url(Champions/" + ChampId[champions[2][0]] + ".png)");
-  $("#champ4").css("background-image", "url(Champions/" + ChampId[champions[3][0]] + ".png)");
-  $("#champ5").css("background-image", "url(Champions/" + ChampId[champions[4][0]] + ".png)");
-}
-function insertSpells(){
-  $("#spell1").css("background-image", "url(Spells/" + IdToSpell[champions[0][1]] + ".png");
-  $("#spell2").css("background-image", "url(Spells/" + IdToSpell[champions[0][2]] + ".png");
-  $("#spell3").css("background-image", "url(Spells/" + IdToSpell[champions[1][1]] + ".png");
-  $("#spell4").css("background-image", "url(Spells/" + IdToSpell[champions[1][2]] + ".png");
-  $("#spell5").css("background-image", "url(Spells/" + IdToSpell[champions[2][1]] + ".png");
-  $("#spell6").css("background-image", "url(Spells/" + IdToSpell[champions[2][2]] + ".png");
-  $("#spell7").css("background-image", "url(Spells/" + IdToSpell[champions[3][1]] + ".png");
-  $("#spell8").css("background-image", "url(Spells/" + IdToSpell[champions[3][2]] + ".png");
-  $("#spell9").css("background-image", "url(Spells/" + IdToSpell[champions[4][1]] + ".png");
-  $("#spell10").css("background-image", "url(Spells/" + IdToSpell[champions[4][2]] + ".png");
-  $("#spell1").addClass("spell-" + IdToSpell[champions[0][1]]);
-  $("#spell2").addClass("spell-" + IdToSpell[champions[0][2]]);
-  $("#spell3").addClass("spell-" + IdToSpell[champions[1][1]]);
-  $("#spell4").addClass("spell-" + IdToSpell[champions[1][2]]);
-  $("#spell5").addClass("spell-" + IdToSpell[champions[2][1]]);
-  $("#spell6").addClass("spell-" + IdToSpell[champions[2][2]]);
-  $("#spell7").addClass("spell-" + IdToSpell[champions[3][1]]);
-  $("#spell8").addClass("spell-" + IdToSpell[champions[3][2]]);
-  $("#spell9").addClass("spell-" + IdToSpell[champions[4][1]]);
-  $("#spell10").addClass("spell-" + IdToSpell[champions[4][2]]);
-
-
-
-}
-function insertInsight(){
-
-  for (i = 0; i < 5; i++){
-    if (champions[i][3] == 1){
-      checkInsight[i] = 2;
-      multiplier[i] -= 0.15;
-    }
-    else{
-      checkInsight[i] = 1;
-    }
-  }
-  $('#insight1').css("background-image", "url(Other/Insight" + checkInsight[0] + ".png)");
-  $('#insight2').css("background-image", "url(Other/Insight" + checkInsight[1] + ".png)");
-  $('#insight3').css("background-image", "url(Other/Insight" + checkInsight[2] + ".png)");
-  $('#insight4').css("background-image", "url(Other/Insight" + checkInsight[3] + ".png)");
-  $('#insight5').css("background-image", "url(Other/Insight" + checkInsight[4] + ".png)");
-  $('#insight1').attr("disabled", true);
-  $('#insight2').attr("disabled", true);
-  $('#insight3').attr("disabled", true);
-  $('#insight4').attr("disabled", true);
-  $('#insight5').attr("disabled", true);
-
+  alert(sumSwitch['spell-Exhaust']);IdToChamp['266']
+  $("#champ1").css("background-image", "url(Champions/" + IdToChamp[champions[0][0]] + ".png)");
+  $("#champ2").css("background-image", "url(Champions/" + IdToChamp[champions[1][0]] + ".png)");
+  $("#champ3").css("background-image", "url(Champions/" + IdToChamp[champions[2][0]] + ".png)");
+  $("#champ4").css("background-image", "url(Champions/" + IdToChamp[champions[3][0]] + ".png)");
+  $("#champ5").css("background-image", "url(Champions/" + IdToChamp[champions[4][0]] + ".png)");
 }
 function handle(e){
         if(e.keyCode === 13){
@@ -268,7 +332,7 @@ function changeInsight(insight){
   }
   else{
   insightToggle[InsightToChamp[insight]] = false;
-    $("#" + insight).css("background-image", "url(Other/Insight1.png)");
+    $("#" + insight).css("background-image", "url(Other/Insight.png)");
     multiplier[InsightToChamp[insight]] += 0.15;
 }
 }
