@@ -66,10 +66,10 @@ ChampId['82'] = "Mordekaiser"; ChampId['25'] = "Morgana"; ChampId['267'] = "Nami
 ChampId['2'] = "Olaf"; ChampId['61'] = "Orianna"; ChampId['516'] = "Ornn"; ChampId['80'] = "Pantheon"; ChampId['78'] = "Poppy"; ChampId['133'] = "Quinn"; ChampId['497'] = "Rakan"; ChampId['33'] = "Rammus";
 ChampId['421'] = "RekSai"; ChampId['58'] = "Renekton"; ChampId['107'] = "Rengar"; ChampId['92'] = "Riven"; ChampId['68'] = "Rumble"; ChampId['13'] = "Ryze"; ChampId['113'] = "Sejuani"; ChampId['35'] = "Shaco";
 ChampId['98'] = "Shen"; ChampId['102'] = "Shyvana"; ChampId['27'] = "Singed"; ChampId['14'] = "Sion"; ChampId['15'] = "Sivir"; ChampId['72'] = "Skarner"; ChampId['37'] = "Sona"; ChampId['16'] = "Soraka";
-ChampId['50'] = "Swain"; ChampId['223'] = "TahmKench"; ChampId['163'] = "Taliyaah"; ChampId['91'] = "Talon"; ChampId['44'] = "Taric"; ChampId['17'] = "Teemo"; ChampId['412'] = "Thresh"; ChampId['18'] = "Tristana";
+ChampId['50'] = "Swain"; ChampId['134'] = "Syndra"; ChampId['223'] = "TahmKench"; ChampId['163'] = "Taliyah"; ChampId['91'] = "Talon"; ChampId['44'] = "Taric"; ChampId['17'] = "Teemo"; ChampId['412'] = "Thresh"; ChampId['18'] = "Tristana";
 ChampId['48'] = "Trundle"; ChampId['23'] = "Tryndamere"; ChampId['57'] = "TwistedFate"; ChampId['29'] = "Twitch"; ChampId['77'] = "Udyr"; ChampId['6'] = "Urgot"; ChampId['110'] = "Varus"; ChampId['67'] = "Vayne";
 ChampId['45'] = "Veigar"; ChampId['161'] = "Velkoz"; ChampId['112'] = "Viktor"; ChampId['8'] = "Vladimir"; ChampId['106'] = "Volibear"; ChampId['19'] = "Warwick"; ChampId['498'] = "Xayah"; ChampId['101'] = "Xerath";
-ChampId['5'] = "XinZhao"; ChampId['83'] = "Yorick"; ChampId['154'] = "Zac"; ChampId['238'] = "Zed"; ChampId['115'] = "Ziggs"; ChampId['26'] = "Zilean"; ChampId['143'] = "Zyra";
+ChampId['5'] = "XinZhao"; ChampId['157'] = "Yasuo"; ChampId['83'] = "Yorick"; ChampId['154'] = "Zac"; ChampId['238'] = "Zed"; ChampId['115'] = "Ziggs"; ChampId['26'] = "Zilean"; ChampId['143'] = "Zyra";
 
 
 var IdToSpell = new Array();
