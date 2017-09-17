@@ -152,6 +152,7 @@ function search(){
       url:'http://lolsumms-server-lolsumms-server.193b.starter-ca-central-1.openshiftapps.com/info',
       data: {name: x, region: y},
       dataType: "json",
+      crossDomain: true,
       success: function(data){
         $("#firstmain").hide();
   $("#main").css("visibility", 'visible');
