@@ -149,7 +149,7 @@ function search(){
   var x = document.getElementById('summoner').value;
   var y = document.getElementById('regionselect').value;
     $.ajax({
-      url:'http://127.0.0.1:5000/info',
+      url:'http://lolsumms-server-lolsumms-server.193b.starter-ca-central-1.openshiftapps.com/info',
       data: {name: x, region: y},
       dataType: "json",
       success: function(data){
