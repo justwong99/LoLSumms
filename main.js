@@ -1,5 +1,12 @@
+// variables
 var tempid = "";
 var tempspellid = "";
+var timers = new Array(10);
+var champions = new Array();
+var spellcooldown = new Array(10);
+var spellToggle = false;
+
+// dictionaries and arrays
 var summs = new Array();
 summs['spell-Barrier'] = 180;
 summs['spell-Clarity'] = 240;
@@ -86,10 +93,6 @@ IdToSpell['11'] = "Smite";
 IdToSpell['12'] = "Teleport";
 
 
-
-
-var timers = new Array(10);
-
 var running = new Array(10);
 running[0] = false;
 running[1] = false;
@@ -142,37 +145,38 @@ checkInsight[2] = 0;
 checkInsight[3] = 0;
 checkInsight[4] = 0;
 
-var champions = new Array();
+
 
 function search(){
-
+// call the server
   var x = document.getElementById('summoner').value;
   var y = document.getElementById('regionselect').value;
     $.ajax({
       url:'http://lolsumms-server-lolsumms-server.193b.starter-ca-central-1.openshiftapps.com/info',
-      data: {name: x, region: y},
+      data: {name: x, region: y}, // pass in summoner name and region for api call
       dataType: "json",
       crossDomain: true,
       success: function(data){
         $("#firstmain").hide();
   $("#main").css("visibility", 'visible');
-        champions[0] = data[0];
+        champions[0] = data[0]; // pass in necessary info to champion array
         champions[1] = data[1];
         champions[2] = data[2];
         champions[3] = data[3];
         champions[4] = data[4];
-        insertChamps();
+        insertChamps(); // set data
         insertInsight();
         insertSpells();
       },
       error: function(textStatus, errorThrow){
  
-    alert("Summoner not found");
+    alert("Summoner not found"); // on failiure
     window.location.reload();
       }
 
    });
 }
+// set values on search (online only)
 function insertChamps(){
 
   $("#champ1").css("background-image", "url(Champions/" + ChampId[champions[0][0]] + ".png)");
@@ -229,18 +233,13 @@ function insertInsight(){
   $('#insight5').attr("disabled", true);
 
 }
-function handle(e){
-        if(e.keyCode === 13){
-            e.preventDefault(); // Ensure it is only this code that rusn
-            search();
-        }
-    }
 
-function change(champ){ 
+
+function change(champ){ // chaange champ icon (custom)
   $("#" + tempid).css("background-image", "url(Champions/" + champ + ".png)");
   
 }
-function changeSpell(spell){ 
+function changeSpell(spell){ // insert spell when being changed(custom)
   $("#" + tempspellid).css("background-image", "url(Spells/" + spell + ".png)");
   var secondClass = "spell-" + (spell);
   removeSpell(tempspellid);
@@ -249,7 +248,12 @@ function changeSpell(spell){
   document.getElementById(tempspellid).innerHTML = "";
   running[IdToNum[tempspellid]] = false;
 }
-function changeBoots(boots){
+function removeSpell(tempspellid){ // remove a spell when it is being changed (custom)
+  $("#" + tempspellid).removeClass (function (index, className) {
+    return (className.match (/(^|\s)spell-\S+/g) || []).join(' ');
+});
+}
+function changeBoots(boots){ // change boots
   if (bootsToggle[BootsToChamp[boots]] == false){
     bootsToggle[BootsToChamp[boots]] = true;
     $("#" + boots).css("background-image", "url(Other/Boots2.png)");
@@ -261,7 +265,7 @@ function changeBoots(boots){
     multiplier[BootsToChamp[boots]] += 0.1;
 }
 }
-function changeInsight(insight){
+function changeInsight(insight){ // change mastery (custom)
   if (insightToggle[InsightToChamp[insight]] == false){
     insightToggle[InsightToChamp[insight]] = true;
     $("#" + insight).css("background-image", "url(Other/Insight2.png)");
@@ -273,6 +277,8 @@ function changeInsight(insight){
     multiplier[InsightToChamp[insight]] += 0.15;
 }
 }
+
+// selection dropdowns (custom only)
 function showDropdown(){
 hideBar();
   $("#myDropdown").toggleClass("show");
@@ -282,9 +288,8 @@ hideBar();
 
    $("#mySpellDropdown").toggleClass("show");
 }
-function test(){
-  alert("xd");
-}
+
+// function ensures only one dropdown can be open at any time
 function hideBar(){
    var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
@@ -295,13 +300,14 @@ function hideBar(){
       }
     }
 }
-var spellcooldown = new Array(10);
-  var value = 5;
-function getCooldown(){
+
+// Timers
+function getCooldown(){ // get cooldown of timers
   var tempcooldown = $("#" + tempspellid).prop("classList");
   spellcooldown = Math.round(summs[tempcooldown[1]] * multiplier[IdToChamp[tempspellid]]);
 }
-function startCount(spellid, seconds){
+
+function startCount(spellid, seconds){ // start counter of spell using objects
   var tempImg = $("#" + spellid).prop("classList");
     $("#" + spellid).css("background-image", "url(Spells/" + sumSwitch[tempImg[1]] +"2.png)");
   var buttonNum = document.getElementById(spellid);
@@ -323,13 +329,14 @@ function startCount(spellid, seconds){
 
 }
 
+// stops a timer
 function stopCount(spellid){
   clearInterval(timers[IdToNum[tempspellid]]);
 }
 
 
 
-var spellToggle = false;
+// allow spells to change (custom)
 
 function toggleSpell(){
 
@@ -343,7 +350,12 @@ function toggleSpell(){
     $("#checkbox").css("background-image", "none");
   }
 }
-window.onclick = function(event) {
+
+
+
+// Event listens for buttons
+ 
+window.onclick = function(event) { // show dropdown
   if (!event.target.matches('button') ) {
 
     var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -357,17 +369,18 @@ window.onclick = function(event) {
   }
 }
 
-function removeSpell(tempspellid){
-  $("#" + tempspellid).removeClass (function (index, className) {
-    return (className.match (/(^|\s)spell-\S+/g) || []).join(' ');
-});
-}
+function handle(e){
+        if(e.keyCode === 13){
+            e.preventDefault(); // when enter is presssed, run search()
+            search();
+        }
+    }
 
 $( ".champion" ).click(function() {
   tempid = (this.id);
-  showDropdown();
+  showDropdown(); // change champ (custom only)
 });
-$( ".spell" ).click(function() {
+$( ".spell" ).click(function() { // change spell, or start/stop timer for spell
   tempspellid = (this.id);
   if (spellToggle == true){
   showSpellDropdown();
@@ -389,13 +402,13 @@ else{
 }
 });
 
-$( ".spell-choice" ).click(function() {
+$( ".spell-choice" ).click(function() { // spell dropdown
   changeSpell(this.id);
   
 });
-$( ".boots" ).click(function() {
+$( ".boots" ).click(function() { // toggle boots
   changeBoots(this.id); 
 });
-$( ".insight" ).click(function() {
+$( ".insight" ).click(function() { // toggle mastery (custom only)
   changeInsight(this.id); 
 });

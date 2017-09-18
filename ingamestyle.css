@@ -4,6 +4,7 @@ body{
 #logo{
 	position: relative; 
 float: left;
+z-index: 1;
 }
 
 #custom{
@@ -54,13 +55,14 @@ nav{
 	margin: 20px;
 	vertical-align: middle;
 	display: inline-block;
+	text-align: center;
 
 }
 .changebar{
 	position: relative;
 	text-align: center;
 	width: 100%;
-
+text-align: center;
 }
 #checkbox{
 	position: relative;
@@ -76,6 +78,8 @@ nav{
 	position: relative;
 	width: 100%;
 	text-align: center;
+	margin-top: 30px;
+	bottom: 30px;
 }
 
 .champion{
