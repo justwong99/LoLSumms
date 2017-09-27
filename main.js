@@ -152,7 +152,7 @@ function search(){
   var x = document.getElementById('summoner').value;
   var y = document.getElementById('regionselect').value;
     $.ajax({
-      url:'lolsumms-server-lolsumms-server.193b.starter-ca-central-1.openshiftapps.com/info',
+      url:'http://lolsumms-server-lolsumms-server.193b.starter-ca-central-1.openshiftapps.com/info',
       data: {name: x, region: y}, // pass in summoner name and region for api call
       dataType: "json",
       crossDomain: true,
