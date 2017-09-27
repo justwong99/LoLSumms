@@ -152,11 +152,12 @@ function search(){
   var x = document.getElementById('summoner').value;
   var y = document.getElementById('regionselect').value;
     $.ajax({
-      url:'http://lolsumms-server-lolsumms-server.193b.starter-ca-central-1.openshiftapps.com/info',
+      url:'https://lolsumms-server-lolsumms-server.193b.starter-ca-central-1.openshiftapps.com/info',
       data: {name: x, region: y}, // pass in summoner name and region for api call
       dataType: "json",
       crossDomain: true,
       success: function(data){
+        alert(data);
         $("#firstmain").hide();
   $("#main").css("visibility", 'visible');
         champions[0] = data[0]; // pass in necessary info to champion array
